@@ -31,3 +31,6 @@ def communitypage2(request):
 
 def Userintroduction(request):
     return render(request, 'Userintroduction.html')
+
+def consult(request):
+    return render(request, 'consult.html')
