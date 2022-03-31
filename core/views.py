@@ -41,4 +41,6 @@ def menu(request):
 def information(request):
     return render(request, 'information.html')
 
+def comment(request):
+    return render(request, 'comment.html')
 
