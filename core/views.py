@@ -34,3 +34,7 @@ def Userintroduction(request):
 
 def consult(request):
     return render(request, 'consult.html')
+
+def menu(request):
+    return render(request, 'menu.html')
+
