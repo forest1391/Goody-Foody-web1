@@ -38,3 +38,7 @@ def consult(request):
 def menu(request):
     return render(request, 'menu.html')
 
+def information(request):
+    return render(request, 'information.html')
+
+

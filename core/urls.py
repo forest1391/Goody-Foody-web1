@@ -32,5 +32,6 @@ urlpatterns = [
     path('communitypage2.html', views.communitypage2),
     path('Userintroduction.html', views.Userintroduction),
     path('consult.html', views.consult),
-    path('menu.html', views.menu)
+    path('menu.html', views.menu),
+    path('information.html', views.menu)
 ]
