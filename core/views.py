@@ -44,3 +44,6 @@ def information(request):
 def comment(request):
     return render(request, 'comment.html')
 
+def consultchatroom(request):
+    return render(request, 'consultchatroom.html')
+
