@@ -35,5 +35,6 @@ urlpatterns = [
     path('menu.html', views.menu),
     path('information.html', views.information),
     path('comment.html', views.comment),
-    path('consultchatroom.html', views.consultchatroom)
+    path('consultchatroom.html', views.consultchatroom),
+    path('menuadd.html', views.menuadd)
 ]

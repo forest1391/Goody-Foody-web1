@@ -47,3 +47,6 @@ def comment(request):
 def consultchatroom(request):
     return render(request, 'consultchatroom.html')
 
+def menuadd(request):
+    return render(request, 'menuadd.html')
+
