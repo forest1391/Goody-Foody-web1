@@ -50,3 +50,6 @@ def consultchatroom(request):
 def menuadd(request):
     return render(request, 'menuadd.html')
 
+def Storeinformation(request):
+    return render(request, 'Storeinformation.html')
+
