@@ -24,6 +24,10 @@ ol {
   ol li {
     list-style: none; }
 
+.wrap{
+    margin:0 auto;
+}
+
 img {
   height: auto;
   max-width: 100%; }
