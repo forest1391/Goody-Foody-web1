@@ -53,3 +53,6 @@ def menuadd(request):
 def Storeinformation(request):
     return render(request, 'Storeinformation.html')
 
+def map(request):
+    return render(request, 'map.html')
+
