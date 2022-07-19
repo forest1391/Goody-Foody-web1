@@ -9,10 +9,10 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Original - Lifestyle Blog Template</title>
+    <title>Goody Foody</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="/static/img/core-img/favicon.ico">
+    <link rel="icon" href="/static/img/bg-img/goody.jpg">
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="/static/css/style.css">
@@ -33,11 +33,8 @@
                         <div class="breaking-news-area">
                             <div id="breakingNewsTicker" class="ticker">
                                 <ul>
-                                    <li><a href="#">Hello World!</a></li>
-                                    <li><a href="#">Hello Universe!</a></li>
-                                    <li><a href="#">Hello Original!</a></li>
-                                    <li><a href="#">Hello Earth!</a></li>
-                                    <li><a href="#">Hello Colorlib!</a></li>
+                                    <li><a href="#">美好的一天</a></li>
+                                    <li><a href="#">從美食開始!</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -48,9 +45,7 @@
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Behance"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -62,7 +57,8 @@
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
-                        <a href="index.html" class="original-logo"><img src="/static/img/core-img/logo.png" alt=""></a>
+                        <a href="/index" class="original-logo"><img src="/static/img/bg-img/goody.jpg" width="100" height="100" alt=""></a>
+                        <h3>Goody Foody</h3>
                     </div>
                 </div>
             </div>
@@ -93,12 +89,12 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="index.html">首頁</a></li>
-                                    <li><a href="map.html">查詢店家</a></li>
-                                    <li><a href="community.html">社群</a></li>
-                                    <li><a href="analyze.html">分析</a></li>
-                                    <li><a href="consult.html">諮詢</a></li>
-                                    <li><a href="login.html">會員</a></li>
+                                    <li><a href="/index">首頁</a></li>
+                                    <li><a href="/map">查詢店家</a></li>
+                                    <li><a href="/community">社群</a></li>
+                                    <li><a href="/analyze">分析</a></li>
+                                    <li><a href="/consult">諮詢</a></li>
+                                    <li><a href="/login">登入</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -118,46 +114,39 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-9">
                 <div class="contact-form">
-                    <h5>Please enter password</h5>
+                    <h5>登入/註冊</h5>
                     <!-- Contact Form -->
-                    <form action="#" method="post">
+                    <form action="/login/" method="post">
+                         {% csrf_token %}
                         <div class="row">
-                            <div class="col-12">
-                                <div class="group">
-                                    <input type="text" name="name" id="name" required>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <label>姓名(Name)</label>
-                                </div>
-                            </div>
+<!--                            <div class="col-12">-->
+<!--                                <div class="group">-->
+<!--                                    <input type="text" name="name" id="name" required>-->
+<!--                                    <span class="highlight"></span>-->
+<!--                                    <span class="bar"></span>-->
+<!--                                    <label>姓名</label>-->
+<!--                                </div>-->
+<!--                            </div>-->
 
                             <div class="col-12">
                                 <div class="group">
-                                    <input type="email" name="email" id="email" required>
+                                    <input type="email" name="account" id="account" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
-                                    <label>信箱(Email)</label>
+                                    <label>信箱</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="group">
-                                    <input type="text" name="subject" id="subject" required>
+                                    <input type="text" name="password" id="pwd" required>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
-                                    <label>密碼(password)</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="group">
-
-                                    <input type="message" name="message" id="message" required>
-                                    <span class="highlight"></span>
-                                    <span class="bar"></span>
-                                    <label>驗證嗎(Messageverification code)</label>
+                                    <label>密碼</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn original-btn">登入</button>
+<!--                                <button type="submit" class="btn original-btn">註冊</button>-->
                             </div>
                         </div>
                     </form>
@@ -193,12 +182,12 @@
                                 <!-- Nav Start -->
                                 <div class="classynav">
                                     <ul>
-                                        <li><a href="index.html">首頁</a></li>
-                                        <li><a href="map.html">查詢店家</a></li>
-                                        <li><a href="community.html">社群</a></li>
-                                        <li><a href="analyze.html">分析</a></li>
-                                        <li><a href="consult.html">諮詢</a></li>
-                                        <li><a href="login.html">會員</a></li>
+                                        <li><a href="/index">首頁</a></li>
+                                        <li><a href="/map">查詢店家</a></li>
+                                        <li><a href="/community">社群</a></li>
+                                        <li><a href="/analyze">分析</a></li>
+                                        <li><a href="/consult">諮詢</a></li>
+                                        <li><a href="/login">登入</a></li>
                                     </ul>
                                 </div>
                                 <!-- Nav End -->
@@ -208,12 +197,10 @@
 
                     <!-- Footer Social Area -->
                     <div class="footer-social-area mt-30">
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Behance"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>

@@ -14,29 +14,35 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import path
 
-from . import views
+from views import auth_views,reviews_views
+
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    path('', views.index),
-    path('index/', views.index),
-    path('analyze/', views.analyze),
-    path('coming/', views.coming),
-    path('contact/', views.contact),
-    path('single/', views.single),
-    path('community/', views.community),
-    path('login/', views.login),
-    path('communitypage/', views.communitypage),
-    path('communitypage2/', views.communitypage2),
-    path('Userintroduction/', views.Userintroduction),
-    path('consult/', views.consult),
-    path('menu/', views.menu),
-    path('information/', views.information),
-    path('comment/', views.comment),
-    path('consultchatroom/', views.consultchatroom),
-    path('menuadd/', views.menuadd),
-    path('Storeinformation/', views.Storeinformation),
-    path('map/', views.map)
+    # path('', views.index),
+    path('', lambda request: redirect('/index/')),#直接導向views畫面  lambda
+    path('index/', reviews_views.index),
+    path('analyze/', reviews_views.analyze),
+    # path('coming/', reviews_views.coming),
+    # path('contact/', reviews_views.contact),
+    # path('single/', reviews_views.single),
+    path('community/', reviews_views.community),
+    path('communitypage/', reviews_views.communitypage),
+    path('communitypage2/', reviews_views.communitypage2),
+    path('Userintroduction/', reviews_views.Userintroduction),
+    path('consult/', reviews_views.consult),
+    path('menu/', reviews_views.menu),
+    path('information/', reviews_views.information),
+    path('comment/', reviews_views.comment),
+    path('consultchatroom/', reviews_views.consultchatroom),
+    path('menuadd/', reviews_views.menuadd),
+    path('Storeinformation/', reviews_views.storeinformation),
+    path('map/', reviews_views.map),
+    path('member/', reviews_views.member),
+
+    path('login/', auth_views.login),
+    path('logout/', auth_views.logout),
 ]
