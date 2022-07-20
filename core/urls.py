@@ -42,6 +42,8 @@ urlpatterns = [
     path('Storeinformation/', reviews_views.storeinformation),
     path('map/', reviews_views.map),
     path('member/', reviews_views.member),
+    path('verify_diet/', reviews_views.verify_diet),
+    path('verify_store/', reviews_views.verify_store),
 
     path('login/', auth_views.login),
     path('logout/', auth_views.logout),

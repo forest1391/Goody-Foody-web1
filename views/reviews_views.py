@@ -89,3 +89,10 @@ def map(request):
 def member(request):
     return render(request, 'member.html')
 
+@user_login_required
+def verify_diet(request):
+    return render(request, 'verify_diet.html')
+
+user_login_required
+def verify_store(request):
+    return render(request, 'verify_store.html')
