@@ -17,10 +17,6 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/static/css/style.css">
 
-    <!-- <logineye css> -->
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"/>
-
 </head>
 
 </head>
@@ -98,7 +94,8 @@
                                     <li><a href="/community">社群</a></li>
                                     <li><a href="/analyze">分析</a></li>
                                     <li><a href="/consult">諮詢</a></li>
-                                    <li><a href="/login">登入</a></li>
+                                    <li><a href="/member">會員</a></li>
+                                    <li><a href="/logout/">登出</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -118,12 +115,11 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-9">
                 <div class="contact-form">
-                    <h5>登入/註冊</h5>
+                    <h5>營養師資格驗證</h5>
                     <!-- Contact Form -->
                     <form action="/login/" method="post">
                          {% csrf_token %}
                         <div class="row">
-                            
                             <div class="col-12">
                                 <div class="group">
                                     <input type="email" name="account" id="account" required>
@@ -132,38 +128,28 @@
                                     <label>信箱</label>
                                 </div>
                             </div>
-                            <div class="col-12 ">
+                            <div class="col-12">
                                 <div class="group">
-                                    <input type="text" class="form-control" name="password" id="pwd" required>
+                                    <input type="text" name="password" id="pwd" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
                                     <label>密碼</label>
-                                    <i id="checkEye" class="fas fa-eye"></i>
                                 </div>
                             </div>
-                            <label><input  type="radio" name="user1" value=1>一般使用者</label>
-                            <label><input  type="radio" name="user2" value=2>營養師身分</label>
-                            <label><input  type="radio" name="user3" value=3>店家身分</label>
-<!--                            <div class="col-12">-->
-<!--                                <button type="submit" class="btn original-btn" >-->
-<!--                                    <a href="">一般使用者</a>-->
-<!--                                </button>-->
-<!--                                <button type="submit" class="btn original-btn" >-->
-<!--                                    <a href="">營養師身分</a>-->
-<!--                                </button>-->
-<!--                                <button type="submit" class="btn original-btn" >-->
-<!--                                    <a href="">店家身分</a>-->
-<!--                                </button>-->
-<!--                            </div>-->
+
+                            <div class="form-group">
+
+					            <label for="exampleInputFile">
+					            	營養師證書證明
+					            </label>
+					            <input type="file" class="form-control-file" id="exampleInputFile">
+				            </div>
                             <div class="col-12">
-                                <button type="submit" class="btn original-btn">登入</button>
-                                <a href="/register" class="btn original-btn">註冊</a>
+                                <button type="submit" class="btn original-btn">驗證</button>
 <!--                                <button type="submit" class="btn original-btn">註冊</button>-->
                             </div>
-                        </div> 
-
+                        </div>
                     </form>
-                    <a href="/regist40">
-                        <button type="submit" class="btn original-btn">註冊</button>
-                    </a> 
                 </div>
             </div>
         </div>
@@ -201,7 +187,8 @@
                                         <li><a href="/community">社群</a></li>
                                         <li><a href="/analyze">分析</a></li>
                                         <li><a href="/consult">諮詢</a></li>
-                                        <li><a href="/login">登入</a></li>
+                                        <li><a href="/member">會員</a></li>
+                                        <li><a href="/logout/">登出</a></li>
                                     </ul>
                                 </div>
                                 <!-- Nav End -->
@@ -230,9 +217,6 @@
     <script src="/static/js/plugins.js"></script>
     <!-- Active js -->
     <script src="/static/js/active.js"></script>
-    <!-- <logineye js> -->
-    <script src="/static/js/logineye.js"></script>
-
 
 </body>
 </html>

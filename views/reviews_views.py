@@ -26,8 +26,8 @@ def analyze(request):
 #     return render(request, 'single.html')
 
 # @user_login_required
-def login(request):
-    return render(request, 'login.html')
+# def login(request):
+#     return render(request, 'login.html')
 
 @user_login_required
 def community(request):
@@ -89,151 +89,16 @@ def member(request):
     return render(request, 'member.html')
 
 
-# @user_login_required
-# def comment(request):
-#     r = requests.get(
-#         f'{root}/all/',
-#         cookies={'sessionid': request.COOKIES['sessionid']}
-#     )
-#     if r.status_code == 401:
-#         return redirect('/logout/')
-
-#     result = r.json()
-#     restaurant_msgs = result['data']
-#     return render(request, 'comment.html', {'restaurant_msgs': restaurant_msgs})
-
-# <test>
-# def regist40(request):
-#     return render(request, 'regist40.html')
-
-# def comment_add(request):
-#     return render(request, 'comment.html')
-
-# def deletemsg40(request):
-#     if request.method == 'GET':
-#         return render(request, 'deletemsg40.html')
-
-#     restaurant_msg_id = request.POST['restaurant_msg_id']
-#     data = {
-#         'account': request.COOKIES['account']
-#     }
-
-#     r = requests.post(
-#         f'{root}/deletemsg40/{restaurant_msg_id}/',
-#         data=data,
-#         cookies={'sessionid': request.COOKIES['sessionid']}
-#     )
-#     result = r.json()
-#     return render(request, 'deletemsg40.html', {'message': result['message']})
-#   <test>
-
-# <test2>
-# @user_login_required
-# def comment(request):
-#     r = requests.get(
-#         f'{root}/all/',
-#         cookies={'sessionid': request.COOKIES['sessionid']}
-#     )
-#     if r.status_code == 401:
-#         return redirect('/logout/')
-
-#     result = r.json()
-#     restaurant_msgs = result['data']
-#     return render(request, 'comment.html', {'restaurant_msgs': restaurant_msgs})
+def register(request):
+    return render(request, 'register.html')
 
 
+@user_login_required
+def verify_diet(request):
+    return render(request, 'verify_diet.html')
 
-# def comment_add(request):
-#     if request.method == 'GET':
-#         return render(request, 'comment.html')
-#     restaurant_msg_id=request.POST['restaurant_msg_id']
-#     restaurant_id = request.POST['restaurant_id']
-#     content	 = request.POST['content']
-#     time = request.POST['time']
-#     data = {
-#         'restaurant_msg_id': restaurant_msg_id,
-#         'restaurant_id': restaurant_id,
-#         'account': test_account,
-#         'content': content,
-#         'time': time,
-#     }
-#     r = requests.post(
-#         f'{root}/add/',
-#         data=data,
-#     )
-#     result = r.json()
-#     return render(request, 'comment.html', {'message': result['message']})
+@user_login_required
+def verify_store(request):
+    return render(request, 'verify_store.html')
 
-# @user_login_required
-# def detail(request, pk):
-#     r = requests.get(
-#         f'{root}/get/{pk}/',
-#         cookies={'sessionid': request.COOKIES['sessionid']}
-#     )
-#     result = r.json()
-#     if result['success'] is True:
-#         book = result['data']
-#         return render(request, 'detail.html', {'book': book})
-#     else:
-#         message = result['message']
-#         return render(request, 'result.html', {'message': message})
-
-
-# @user_login_required
-# def search(request):
-#     user_id = request.GET.get('user_id')
-#     r = requests.get(
-#         f'{root}/get_critic_reviews/',
-#         params={'user_id': user_id},
-#         cookies={'sessionid': request.COOKIES['sessionid']}
-#     )
-#     data = r.json()
-#     books = data['data']
-#     return render(request, 'critic_reviews.html', {'books': books})
-
-
-# @user_login_required
-# def edit(request):
-#     if request.method == 'GET':
-#         return render(request, 'edit_form.html')
-
-#     book_no = request.POST['book_no']
-#     title = request.POST['title']
-#     name = request.POST['name']
-#     comment = request.POST['comment']
-
-#     data = {
-#         'user_id': request.COOKIES['user_id'],
-#         'title': title,
-#         'name': name,
-#         'comment': comment
-#     }
-
-#     r = requests.post(
-#         f'{root}/edit/{book_no}/',
-#         data=data,
-#         cookies={'sessionid': request.COOKIES['sessionid']}
-#     )
-#     result = r.json()
-#     return render(request, 'result.html', {'message': result['message']})
-
-# @user_login_required
-# def delete(request):
-#     if request.method == 'GET':
-#         return render(request, 'deletemsg40.html')
-
-#     restaurant_msg_id  = request.POST['restaurant_msg_id ']
-#     data = {
-#         'account': request.COOKIES['account']
-#     }
-
-#     r = requests.post(
-#         f'{root}/deletemsg40/{restaurant_msg_id }/',
-#         data=data,
-#         cookies={'sessionid': request.COOKIES['sessionid']}
-#     )
-#     result = r.json()
-#     return render(request, 'result.html', {'message': result['message']})
-
-# <test2>
 
