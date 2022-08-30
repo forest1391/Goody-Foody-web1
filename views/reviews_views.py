@@ -27,8 +27,8 @@ def analyze(request):
 #     return render(request, 'single.html')
 
 # @user_login_required
-def login(request):
-    return render(request, 'login.html')
+# def login(request):
+#     return render(request, 'login.html')
 
 @user_login_required
 def community(request):
@@ -89,10 +89,17 @@ def map(request):
 def member(request):
     return render(request, 'member.html')
 
+
+def register(request):
+    return render(request, 'register.html')
+
+
 @user_login_required
 def verify_diet(request):
     return render(request, 'verify_diet.html')
 
-user_login_required
+@user_login_required
 def verify_store(request):
     return render(request, 'verify_store.html')
+
+
