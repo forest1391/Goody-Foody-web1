@@ -119,10 +119,6 @@
                             </div>
                             <!-- Nav End -->
                         </div>
-<!--                        <div class="subscribe-btn">-->
-<!--                            <a href="#" class="btn subscribe-btn" data-toggle="modal" data-target="#subsModal">Subscribe</a>-->
-<!--                        </div>-->
-
                     </nav>
                 </div>
             </div>
@@ -135,59 +131,84 @@
         <h5 class="title">留言</h5>
 
         <ol>
-            <!-- Single Comment Area -->
-            <li class="single_comment_area">
-                <!-- Comment Content -->
-                <div class="comment-content d-flex">
-                    <!-- Comment Author -->
-                    <div class="comment-author">
-                        <img src="/static/img/使用者頭像/1.jpg" alt="author">
-                    </div>
-                    <!-- Comment Meta -->
-                    <div class="single_comment_area">
-                        <a href="#" class="post-date">3 月</a>
-                        <p><a href="#" class="post-author">b1</a></p>
-                        <p> 網友大讚「台北第一名必吃水餃、最好吃的水餃」捷運善導寺站必吃美食「巧之味手工水餃(濟南店)」巧之味近5000則Google評價4.3星   能看出他的高人氣傳說被稱為台北的第一名水餃   愛吃水餃的羽諾當然要來吃</p>
-                        <a href="#" class="comment-reply">Reply</a>
-                    </div>
-                </div>
-                <ol class="children">
-                    <li class="single_comment_area">
-                        <!-- Comment Content -->
-                        <div class="comment-content d-flex">
-                            <!-- Comment Author -->
-                            <div class="comment-author">
-                                <img src="/static/img/使用者頭像/1.jpg" alt="author">
-                            </div>
-                            <!-- Comment Meta -->
-                            <div class="comment-meta">
-                                <a href="#" class="post-date">4 月</a>
-                                <p><a href="#" class="post-author">b2</a></p>
-                                <p>「巧之味手工水餃」在台北是小有名氣店家，被號稱為總統級御用的手工水餃、台北必吃水餃名店，在Google有5000多則評論4.3分超高評價，光是頭銜加名號就足以見得它有多厲害，目前已開設3個據點，熱賣款就是手工</p>
-                                <a href="#" class="comment-reply">Reply</a>
-                            </div>
-                        </div>
-                    </li>
-                </ol>
-            </li>
 
-            <!-- Single Comment Area -->
-            <li class="single_comment_area">
-                <!-- Comment Content -->
-                <div class="comment-content d-flex">
-                    <!-- Comment Author -->
-                    <div class="comment-author">
-                        <img src="/static/img/使用者頭像/2.jpg" alt="author">
-                    </div>
-                    <!-- Comment Meta -->
-                    <div class="comment-meta">
-                        <a href="#" class="post-date">4 月</a>
-                        <p><a href="#" class="post-author">forest機器人</a></p>
-                        <p>Efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-                        <a href="#" class="comment-reply">Reply</a>
-                    </div>
-                </div>
-            </li>
+        <div class="comment-author">
+            <img src="/static/img/使用者頭像/1.jpg" width="5%"> 
+        </div>
+        <br>
+        </br>
+        <form action="/comment/" method="post">
+        {% csrf_token %}
+        <div class="group">
+            <input type="text" name="restaurant_msg_id" id="restaurant_msg_id" placeholder="流水號">
+            <br>
+            <input type="text" name="restaurant_id" id="restaurant_id" placeholder="留言ID">
+            <br>
+            <input type="text" name="user_id" id="account" placeholder="帳號">
+            <br>
+            <!-- <input type="text" name="time" id="time" placeholder="時間"> -->
+            <br>
+            <input type="text" name="content" id="content" placeholder="留言">
+
+            <button type="button" class="btn">取消</button>
+            <button type="submit" class="btn btn-info">送出</button>
+            <!-- <testbtn> -->
+            <a href="/deletemsg40/">
+                <button type="button" class="btn">刪除</button>
+            </a>
+            <!-- <testbtn> -->
+        </div>
+        </form>  
+            <!-- test -->
+            <table class="table">
+                <thead>
+                    <!-- <test> -->
+                    <a class="nav-link" href="/comment/"></a>
+                    <!-- </test> -->
+                <tr>
+                    <th>
+                        自動編號(流水號)
+                    </th>
+                    <!-- <th>
+                        餐廳編號
+                    </th> -->
+                    <th>
+                        留言者
+                    </th>
+                    <th>
+                        內容
+                    </th>
+                    <th>
+                        時間
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for restaurant_msg in restaurant_msgs %}
+                    <tr>
+                        <td>
+                            <a >
+                                {{ restaurant_msg.restaurant_msg_id }}
+                            </a>
+                        </td>
+                        <!-- <td>
+                            {{ restaurant_msg.restaurant_id }}
+                        </td> -->
+                        <td>
+                            {{ restaurant_msg.account }}
+                        </td>
+                        <td>
+                            {{ restaurant_msg.content }}
+                        </td>
+                        <td>
+                            {{ restaurant_msg.time }}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <!-- test -->
+            
         </ol>
     </div>
     <!-- ##### Hero Area Start ##### -->

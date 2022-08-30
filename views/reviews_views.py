@@ -1,7 +1,6 @@
 import requests
 from django.shortcuts import render, redirect
 from core.settings import API_URL as root
-# from utils.decorators import user_login_required
 from utils.decorators import user_login_required
 
 root += 'menu_review'
@@ -65,9 +64,9 @@ def menu(request):
 def information(request):
     return render(request, 'information.html')
 
-@user_login_required
-def comment(request):
-    return render(request, 'comment.html')
+# @user_login_required
+# def comment(request):
+#     return render(request, 'comment.html')
 
 @user_login_required
 def consultchatroom(request):

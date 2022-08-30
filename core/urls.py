@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.shortcuts import redirect
 from django.urls import path
 
-from views import auth_views,reviews_views
+from views import auth_views,reviews_views,comment_views
 
 
 urlpatterns = [
@@ -36,7 +36,6 @@ urlpatterns = [
     path('consult/', reviews_views.consult),
     path('menu/', reviews_views.menu),
     path('information/', reviews_views.information),
-    path('comment/', reviews_views.comment),
     path('consultchatroom/', reviews_views.consultchatroom),
     path('menuadd/', reviews_views.menuadd),
     path('Storeinformation/', reviews_views.storeinformation),
@@ -49,4 +48,12 @@ urlpatterns = [
 
     path('login/', auth_views.login),
     path('logout/', auth_views.logout),
+    
+    # <test>
+    path('comment/', comment_views.comment),
+    # path('comment/add/',comment_views.comment_add),
+    path('regist40/', comment_views.regist40),
+    path('deletemsg40/', comment_views.deletemsg40),
+    # <test>
+    
 ]
