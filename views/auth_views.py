@@ -6,7 +6,6 @@ from utils.decorators import user_login_required
 
 root += 'auth'
 
-
 def login(request):
     if 'user_id' in request.COOKIES:
         return redirect('/index/')
