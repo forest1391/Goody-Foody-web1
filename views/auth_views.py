@@ -87,7 +87,7 @@ def register(request):
     if result['success'] is True:
         ret = redirect('/login/')
         ret.set_cookie('sessionid', result['sessionid'])
-        ret.set_cookie('user_id', user_id)
+        ret.set_cookie('user_id', account)
         return ret
     else:
         return redirect('/login/')
