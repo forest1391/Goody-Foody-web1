@@ -1,11 +1,9 @@
 import requests
 from django.shortcuts import render, redirect
 from core.settings import API_URL as root
-# from utils.decorators import user_login_required
 from utils.decorators import user_login_required
 
-
-
+root += 'menu_review'
 
 # @user_login_required
 def index(request):
@@ -28,12 +26,12 @@ def analyze(request):
 #     return render(request, 'single.html')
 
 # @user_login_required
-def login(request):
-    return render(request, 'login.html')
+# def login(request):
+#     return render(request, 'login.html')
 
-# @user_login_required
-# def post(request):
-#     return render(request, 'community.html')
+@user_login_required
+def community(request):
+    return render(request, 'community.html')
 
 @user_login_required
 def communitypage(request):
@@ -55,7 +53,7 @@ def consult(request):
 @user_login_required
 def menu(request):
     r = requests.get(
-        f'{root}/menu_review/all/',
+        f'{root}/all/',
         cookies={'sessionid': request.COOKIES['sessionid']}
     )
     result = r.json()
@@ -63,56 +61,12 @@ def menu(request):
     return render(request, 'menu.html', {'menus': menus})
 
 @user_login_required
-def post(request):
-    r1 = requests.get(
-        f'{root}/post/post/',
-        cookies={'sessionid': request.COOKIES['sessionid']}
-    )
-
-    r2 = requests.get(
-        f'{root}/tag/all/',
-        cookies={'sessionid': request.COOKIES['sessionid']}
-    )
-    result1 = r1.json()
-    result2 = r2.json()
-    # print(result)
-    posts = result1['data']
-    tags = result2['data']
-    return render(request, 'community.html', {'posts': posts,'tags':tags})
-
-
-
-
-@user_login_required
-def add(request):
-    if request.method =='GET':
-        return render(request, 'newpost.html')
-
-    post_id = request.POST['post_id']
-    title = request.POST['title']
-    content = request.POST['content']
-
-    data = {
-        'post_id':post_id,
-        'title':title,
-        'content':content
-
-    }
-    r = requests.post(
-        f'{root}/post/add/',
-        data=data
-        )
-
-    return redirect('/community/')
-
-
-@user_login_required
 def information(request):
     return render(request, 'information.html')
 
-@user_login_required
-def comment(request):
-    return render(request, 'comment.html')
+# @user_login_required
+# def comment(request):
+#     return render(request, 'comment.html')
 
 @user_login_required
 def consultchatroom(request):
@@ -134,36 +88,17 @@ def map(request):
 def member(request):
     return render(request, 'member.html')
 
-@user_login_required
-def newpost(request):
-    return render(request, 'newpost.html')
+
+def register(request):
+    return render(request, 'register.html')
+
 
 @user_login_required
 def verify_diet(request):
     return render(request, 'verify_diet.html')
 
-user_login_required
+@user_login_required
 def verify_store(request):
     return render(request, 'verify_store.html')
 
-# @user_login_required
-# def add(request):
-#     if request.method == 'GET':
-#         return render(request, 'newpost.html')
-#
-#     post_id = request.POST['post_id']
-#     title = request.POST['title']
-#     content = request.POST['content']
-#
-#     data = {
-#         'post_id': post_id,
-#         'title': title,
-#         'content': content,
-#     }
-#     r = requests.post(
-#         f'{root}/post/add/',
-#         data=data
-#     )
-#     result = r.json()
-#     return render(request, 'community.html')
 
