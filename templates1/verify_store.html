@@ -94,7 +94,8 @@
                                     <li><a href="/community">社群</a></li>
                                     <li><a href="/analyze">分析</a></li>
                                     <li><a href="/consult">諮詢</a></li>
-                                    <li><a href="/login">登入</a></li>
+                                    <li><a href="/member">會員</a></li>
+                                    <li><a href="/logout/">登出</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -114,20 +115,11 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-9">
                 <div class="contact-form">
-                    <h5>登入/註冊</h5>
+                    <h5>店家資料驗證</h5>
                     <!-- Contact Form -->
                     <form action="/login/" method="post">
                          {% csrf_token %}
                         <div class="row">
-<!--                            <div class="col-12">-->
-<!--                                <div class="group">-->
-<!--                                    <input type="text" name="name" id="name" required>-->
-<!--                                    <span class="highlight"></span>-->
-<!--                                    <span class="bar"></span>-->
-<!--                                    <label>姓名</label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
                             <div class="col-12">
                                 <div class="group">
                                     <input type="email" name="account" id="account" required>
@@ -144,8 +136,34 @@
                                     <label>密碼</label>
                                 </div>
                             </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="group">
+                                    <input type="text" name="name" id="name" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>店家名稱</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="group">
+                                    <input type="email" name="email" id="email" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>聯絡信箱</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+					            <label for="exampleInputFile">
+					            	店家資訊證明
+					            </label>
+					            <input type="file" class="form-control-file" id="exampleInputFile">
+				            </div>
                             <div class="col-12">
-                                <button type="submit" class="btn original-btn">登入</button>
+                                <button type="submit" class="btn original-btn">驗證</button>
 <!--                                <button type="submit" class="btn original-btn">註冊</button>-->
                             </div>
                         </div>
@@ -187,7 +205,8 @@
                                         <li><a href="/community">社群</a></li>
                                         <li><a href="/analyze">分析</a></li>
                                         <li><a href="/consult">諮詢</a></li>
-                                        <li><a href="/login">登入</a></li>
+                                        <li><a href="/member">會員</a></li>
+                                        <li><a href="/logout/">登出</a></li>
                                     </ul>
                                 </div>
                                 <!-- Nav End -->
