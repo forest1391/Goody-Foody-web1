@@ -227,6 +227,14 @@
             <!-- ##### Sidebar Area ##### -->
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="post-sidebar-area">
+                    <form action="/chat/add/" method="post">
+                        {% csrf_token %}
+                        <!-- Widget Area -->
+                        <div class="sidebar-widget-area">
+                            <form action="#" class="search-form">
+                                <input type="search" name="content" id="searchForm" placeholder="content">
+                                {#                            <input type="submit" value="submit">#}
+                            </form>
 
                     <!-- Widget Area -->
                     <div class="sidebar-widget-area">

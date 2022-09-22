@@ -262,6 +262,30 @@ def add_tag(request):
 
 
 
+@user_login_required
+def add_chat(request):
+    # if request.method =='GET':
+    #     return render(request, 'add_eating.html')
+    chat_id = request.POST['chat_id']
+    account = request.POST['account']
+    b_account = request.POST['b_account']
+    time = request.POST['time']
+    content = request.POST['content']
+
+    data = {
+        'chat_id': chat_id,
+        'account': account,
+        'b_account': b_account,
+        'time':time,
+        'content': content
+    }
+    r = requests.post(
+        f'{root}/chat/add/',
+        data=data
+        )
+
+    return redirect('/consultchatroom/')
+
 
 
 @user_login_required
