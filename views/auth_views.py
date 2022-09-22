@@ -13,13 +13,23 @@ def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
 
+    btn_value = None
+    if 'user1' in request.POST:
+        btn_value = request.POST['user1']
+    elif 'user2' in request.POST:
+        btn_value = request.POST['user2']
+    elif 'user3' in request.POST:
+        btn_value = request.POST['user3']
+
     # html
     user_id = request.POST['account']
     pwd = request.POST['password']
+    # btn_value = request.POST['rank_id']
     # api
     data = {
         'account': user_id,
-        'password': pwd
+        'password': pwd,
+        'btn_value': btn_value
     }
     r = requests.post(
         f'{root}/login/',
@@ -34,7 +44,6 @@ def login(request):
         return ret
     else:
         return redirect('/login/')
-
 
 @user_login_required
 def logout(request):

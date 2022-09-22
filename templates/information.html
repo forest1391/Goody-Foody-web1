@@ -20,82 +20,253 @@
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preload-content">
-            <div id="original-load"></div>
-        </div>
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preload-content">
+        <div id="original-load"></div>
     </div>
+</div>
 
-    <!-- Subscribe Modal -->
-    <div class="subscribe-newsletter-area">
-        <div class="modal fade" id="subsModal" tabindex="-1" role="dialog" aria-labelledby="subsModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <div class="modal-body">
-                        <h5 class="title">Subscribe to my newsletter</h5>
-                        <form action="#" class="newsletterForm" method="post">
-                            <input type="email" name="email" id="subscribesForm2" placeholder="Your e-mail here">
-                            <button type="submit" class="btn original-btn">Subscribe</button>
-                        </form>
-                    </div>
+<!-- Subscribe Modal -->
+<div class="subscribe-newsletter-area">
+    <div class="modal fade" id="subsModal" tabindex="-1" role="dialog" aria-labelledby="subsModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <h5 class="title">Subscribe to my newsletter</h5>
+                    <form action="#" class="newsletterForm" method="post">
+                        <input type="email" name="email" id="subscribesForm2" placeholder="Your e-mail here">
+                        <button type="submit" class="btn original-btn">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
+<!-- ##### Header Area Start ##### -->
+<header class="header-area">
 
-        <!-- Top Header Area -->
-        <div class="top-header">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <!-- Breaking News Area -->
-                    <div class="col-12 col-sm-8">
-                        <div class="breaking-news-area">
-                            <div id="breakingNewsTicker" class="ticker">
-                                <ul>
-                                    <li><a href="#">美好的一天</a></li>
-                                    <li><a href="#">從美食開始!</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Top Social Area -->
-                    <div class="col-12 col-sm-4">
-                        <div class="top-social-area">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <!-- Top Header Area -->
+    <div class="top-header">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <!-- Breaking News Area -->
+                <div class="col-12 col-sm-8">
+                    <div class="breaking-news-area">
+                        <div id="breakingNewsTicker" class="ticker">
+                            <ul>
+                                <li><a href="#">美好的一天</a></li>
+                                <li><a href="#">從美食開始!</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Logo Area -->
-        <div class="logo-area text-center">
-            <div class="container h-200">
-                <div class="row h-200 align-items-center">
-                    <div class="col-12">
-                        <a href="/index" class="original-logo"><img src="/static/img/blog-img/r1.jpg" width="200" height="200" alt=""></a>
+                <!-- Top Social Area -->
+                <div class="col-12 col-sm-4">
+                    <div class="top-social-area">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
+                                class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
+                                class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
+                                class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Nav Area -->
-        <div class="original-nav-area" id="stickyNav">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
+    <!-- Logo Area -->
+    <div class="logo-area text-center">
+        <div class="container h-200">
+            <div class="row h-200 align-items-center">
+                <div class="col-12">
+                    <a href="/index" class="original-logo"><img src="/static/img/blog-img/r1.jpg" width="200"
+                                                                height="200" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav Area -->
+    <div class="original-nav-area" id="stickyNav">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar">
+
+                    <!-- Subscribe btn -->
+
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu" id="originalNav">
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="/menu/{{ restaurant.restaurant_id }}">菜單</a></li>
+                                <li class="text-2"><a href="/information/{{ restaurant.restaurant_id }}">店家資訊</a></li>
+                                <li><a href="/comment">評價</a></li>
+                            </ul>
+                        </div>
+
+
+                        <!-- Nav End -->
+                    </div>
+                    <!--                        <div class="subscribe-btn">-->
+                    <!--                            <a href="#" class="btn subscribe-btn" data-toggle="modal" data-target="#subsModal">Subscribe</a>-->
+                    <!--                        </div>-->
+
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- ##### Header Area End ##### -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <dl>
+                    <dt>
+                        <h3 style=""><u>{{ restaurant.name }}</u></h3>
+
+                    </dt>
+                    <dd>
+
+                    </dd>
+                    <br>
+                    <dt>
+                        <u>地址</u>
+
+                    </dt>
+                    <dd>
+                        {{ restaurant.address }}
+                    </dd>
+                    <br>
+                    <dt>
+                        <u>電話</u>
+                    </dt>
+                    <dd>
+                        {{ restaurant.phone }}
+                    </dd>
+                    <br>
+                    <dt>
+                        <u>營業時間</u>
+                    </dt>
+                    <dd>
+                        {{ restaurant.business_hours }}
+                    </dd>
+
+                </dl>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ##### Hero Area Start ##### -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+             <button type="submit" class="btn original-btn">
+                <a href="/information/add">新增餐廳資訊</a>
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<!-- ##### Instagram Feed Area Start ##### -->
+<div class="instagram-feed-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="insta-title">
+                    <h5>店家照片</h5>
+                </div>
+                <p class="heading">新增照片</p>
+                <form action="" method=POST enctype="multipart/form-data">
+
+                <p>照片一
+                    <input type="file" name="ap_picurl1" id="ap_picurl1"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Instagram Slides -->
+    <div class="instagram-slides owl-carousel">
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food1-1.jpg" alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food2.jpg" alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food3.jpg" alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food4.jpg" alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food5-1.jpg" alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Instagram Feed Area End ##### -->
+
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer-area text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Footer Nav Area -->
+                <div class="classy-nav-container breakpoint-off">
                     <!-- Classy Menu -->
-                    <nav class="classy-navbar">
-
-                        <!-- Subscribe btn -->
-
+                    <nav class="classy-navbar justify-content-center">
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -103,7 +274,8 @@
                         </div>
 
                         <!-- Menu -->
-                        <div class="classy-menu" id="originalNav">
+                        <div class="classy-menu">
+
                             <!-- close btn -->
                             <div class="classycloseIcon">
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
@@ -112,189 +284,51 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                  <li><a href="/menu">菜單</a></li>
-                                    <li><a href="/information">店家資訊</a></li>
-                                    <li><a href="/comment">評價</a></li>
+                                    <li><a href="/index">首頁</a></li>
+                                    <li><a href="/map">查詢店家</a></li>
+                                    <li><a href="/community">社群</a></li>
+                                    <li><a href="/analyze">分析</a></li>
+                                    <li><a href="/consult">諮詢</a></li>
+                                    <li><a href="/member">會員</a></li>
+                                    <li><a href="/logout/">登出</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
                         </div>
-<!--                        <div class="subscribe-btn">-->
-<!--                            <a href="#" class="btn subscribe-btn" data-toggle="modal" data-target="#subsModal">Subscribe</a>-->
-<!--                        </div>-->
-
                     </nav>
                 </div>
-            </div>
-        </div>
-    </header>
 
-
-    <!-- ##### Header Area End ##### -->
-<div class="container-fluid">
-     <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<dl>
-				<dt>
-                    <b>地址</b>
-
-				</dt>
-				<dd>
-					 100 台北市中正區齊東街78號1樓
-				</dd><br>
-				<dt>
-					電話
-				</dt>
-				<dd>
-					02-2351-8057
-				</dd><br>
-				<dt>
-					營業時間
-				</dt>
-				<dd>
-					週一: 11:00 am - 8:30 pm<br>
-                    週二: 11:00 am - 8:30 pm<br>
-                    週三: 11:00 am - 8:30 pm<br>
-                    週四: 11:00 am - 8:30 pm<br>
-                    週五: 11:00 am - 8:30 pm<br>
-                    週六: 11:00 am - 8:30 pm<br>
-                    週日: closed
-				</dd>
-
-			</dl>
-
-		</div>
-        </div>
-	</div>
-</div>
-    <!-- ##### Hero Area Start ##### -->
-
-    <!-- ##### Instagram Feed Area Start ##### -->
-    <div class="instagram-feed-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="insta-title">
-                        <h5>店家照片</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Instagram Slides -->
-        <div class="instagram-slides owl-carousel">
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food1-1.jpg" alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food2.jpg" alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food3.jpg" alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food4.jpg" alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food5-1.jpg" alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+                <!-- Footer Social Area -->
+                <div class="footer-social-area mt-30">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
+                            class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"
+                                                                                                  aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"
+                                                                                                 aria-hidden="true"></i></a>
+                    <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i
+                            class="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ##### Instagram Feed Area End ##### -->
 
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-                    <!-- Footer Nav Area -->
-                    <div class="classy-nav-container breakpoint-off">
-                        <!-- Classy Menu -->
-                        <nav class="classy-navbar justify-content-center">
+</footer>
+<!-- ##### Footer Area End ##### -->
 
-                            <!-- Navbar Toggler -->
-                            <div class="classy-navbar-toggler">
-                                <span class="navbarToggler"><span></span><span></span><span></span></span>
-                            </div>
-
-                            <!-- Menu -->
-                            <div class="classy-menu">
-
-                                <!-- close btn -->
-                                <div class="classycloseIcon">
-                                    <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                                </div>
-
-                                <!-- Nav Start -->
-                                <div class="classynav">
-                                    <ul>
-                                        <li><a href="/index">首頁</a></li>
-                                        <li><a href="/map">查詢店家</a></li>
-                                        <li><a href="/community">社群</a></li>
-                                        <li><a href="/analyze">分析</a></li>
-                                        <li><a href="/consult">諮詢</a></li>
-                                        <li><a href="/member">會員</a></li>
-                                        <li><a href="/logout/">登出</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Nav End -->
-                            </div>
-                        </nav>
-                    </div>
-
-                    <!-- Footer Social Area -->
-                    <div class="footer-social-area mt-30">
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-    </footer>
-    <!-- ##### Footer Area End ##### -->
-
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="/static/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="/static/js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="/static/js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="/static/js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="/static/js/active.js"></script>
+<!-- jQuery (Necessary for All JavaScript Plugins) -->
+<script src="/static/js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="/static/js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="/static/js/bootstrap.min.js"></script>
+<!-- Plugins js -->
+<script src="/static/js/plugins.js"></script>
+<!-- Active js -->
+<script src="/static/js/active.js"></script>
 
 </body>
 

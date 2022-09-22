@@ -20,83 +20,564 @@
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preload-content">
-            <div id="original-load"></div>
-        </div>
+<!-- Preloader -->
+<div id="preloader">
+    <div class="preload-content">
+        <div id="original-load"></div>
     </div>
+</div>
 
-    <!-- Subscribe Modal -->
-    <div class="subscribe-newsletter-area">
-        <div class="modal fade" id="subsModal" tabindex="-1" role="dialog" aria-labelledby="subsModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <div class="modal-body">
-                        <h5 class="title">Subscribe to my newsletter</h5>
-                        <form action="#" class="newsletterForm" method="post">
-                            <input type="email" name="email" id="subscribesForm2" placeholder="Your e-mail here">
-                            <button type="submit" class="btn original-btn">Subscribe</button>
-                        </form>
-                    </div>
+<!-- Subscribe Modal -->
+<div class="subscribe-newsletter-area">
+    <div class="modal fade" id="subsModal" tabindex="-1" role="dialog" aria-labelledby="subsModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <h5 class="title">Subscribe to my newsletter</h5>
+                    <form action="#" class="newsletterForm" method="post">
+                        <input type="email" name="email" id="subscribesForm2" placeholder="Your e-mail here">
+                        <button type="submit" class="btn original-btn">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
+<!-- ##### Header Area Start ##### -->
+<header class="header-area">
 
-        <!-- Top Header Area -->
-        <div class="top-header">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <!-- Breaking News Area -->
-                    <div class="col-12 col-sm-8">
-                        <div class="breaking-news-area">
-                            <div id="breakingNewsTicker" class="ticker">
-                                <ul>
-                                    <li><a href="#">美好的一天</a></li>
-                                    <li><a href="#">從美食開始!</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Top Social Area -->
-                    <div class="col-12 col-sm-4">
-                        <div class="top-social-area">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <!-- Top Header Area -->
+    <div class="top-header">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <!-- Breaking News Area -->
+                <div class="col-12 col-sm-8">
+                    <div class="breaking-news-area">
+                        <div id="breakingNewsTicker" class="ticker">
+                            <ul>
+                                <li><a href="#">美好的一天</a></li>
+                                <li><a href="#">從美食開始!</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+                <!-- Top Social Area -->
+                <div class="col-12 col-sm-4">
+                    <div class="top-social-area">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
+                                class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
+                                class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
+                                class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- Logo Area -->
-        <div class="logo-area text-center">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col-12">
-                        <a href="/index" class="original-logo"><img src="/static/img/bg-img/goody.jpg" width="100" height="100" alt=""></a>
-                        <h3>Goody Foody</h3>
+    <!-- Logo Area -->
+    <div class="logo-area text-center">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <a href="/index" class="original-logo"><img src="/static/img/bg-img/goody.jpg" width="100"
+                                                                height="100" alt=""></a>
+                    <h3>Goody Foody</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav Area -->
+    <div class="original-nav-area" id="stickyNav">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar">
+
+                    <!-- Subscribe btn -->
+
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu" id="originalNav">
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="/index">首頁</a></li>
+                                <li><a href="/map">查詢店家</a></li>
+                                <li><a href="/community">社群</a></li>
+                                <li><a href="/analyze">分析</a></li>
+                                <li><a href="/consult">諮詢</a></li>
+                                <li><a href="/member">會員</a></li>
+                                <li><a href="/logout/">登出</a></li>
+                            </ul>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                    <!--                        <div class="subscribe-btn">-->
+                    <!--                            <a href="#" class="btn subscribe-btn" data-toggle="modal" data-target="#subsModal">Subscribe</a>-->
+                    <!--                        </div>-->
+
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ##### Header Area End ##### -->
+
+<!-- ##### Breadcumb Area Start ##### -->
+{#<div class="breadcumb-area bg-img" style="background-image: url(/static/img/bg-img/b1.jpg);">#}
+{#    <div class="container h-100">#}
+{#        <div class="row h-100 align-items-center">#}
+{#            <div class="col-12">#}
+{#                <div class="breadcumb-content text-center">#}
+{#                    <h2>今日攝取</h2>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+<!-- ##### Breadcumb Area End ##### -->
+
+<!-- ##### Blog Wrapper Start ##### -->
+
+<!-- ##### Blog Wrapper End ##### -->
+
+<!-- ##### Cool Facts Area Start ##### -->
+<div class="cool-facts-area section-padding-100-0 bg-img background-overlay"
+     style="background-image: url(/static/img/bg-img/b4.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="single-blog-area blog-style-2 text-center mb-100">
+                    <!-- Blog Content -->
+                    <div class="single-blog-content">
+                        <div class="line"></div>
+
+
+                        <h2 id="current_date" class="post-headline"></h2>
+
+                        <script>
+                            date = new Date();
+                            year = date.getFullYear();
+                            month = date.getMonth() + 1;
+                            day = date.getDate();
+                            document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;
+                        </script>
+                         <h4><a href="#" class="post-headline">今日攝取</a></h4>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Nav Area -->
-        <div class="original-nav-area" id="stickyNav">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
+
+        <div class="row">
+            <!-- Single Cool Facts Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-facts-area text-center mb-100">
+                    <h2><span class="counter">{{ kcal }}</span></h2>
+                    <p>熱量</p>
+                </div>
+            </div>
+            <!-- Single Cool Facts Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-facts-area text-center mb-100">
+                    <h2><span class="counter">{{ protein }}</span></h2>
+                    <p>蛋白質</p>
+                </div>
+            </div>
+            <!-- Single Cool Facts Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-facts-area text-center mb-100">
+                    <h2><span class="counter">{{ fat }}</span></h2>
+                    <p>脂質</p>
+                </div>
+            </div>
+            <!-- Single Cool Facts Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-facts-area text-center mb-100">
+                    <h2><span class="counter">{{ carbohydrate }}</span></h2>
+                    <p>碳水</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ##### Blog Wrapper Start ##### -->
+<div class="blog-wrapper section-padding-100-0 clearfix">
+    <!-- ##### Cool Facts Area End ##### -->
+    {#        <h2 id="current_date" style="text-align:center"></h2>#}
+    {#    #}
+    {#        <script>#}
+    {#            date = new Date();#}
+    {#            year = date.getFullYear();#}
+    {#            month = date.getMonth() + 1;#}
+    {#            day = date.getDate();#}
+    {#            document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;#}
+    {#        </script>#}
+ <h4 style="text-align:center;">今日飲食紀錄</h4><br>
+<div class="container">
+        <div class="row">
+
+            <!-- Single Blog Area  -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-blog-area blog-style-2 mb-100">
+                    <div class="single-blog-thumbnail">
+                        <img src="/static/img/blog-img/breakfast.jpg" width="300" height="200" alt="">
+                        {#                        <div class="post-date">#}
+                        {#                            #}
+                        {#                            <a href="#">10 <span>3月</span></a>#}
+                        {#                        </div>#}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="single-blog-content mt-50">
+                        <div class="line"></div>
+                        <a href="#" class="post-tag">Breakfast</a>
+                        <h4><a href="#" class="post-headline">早餐</a></h4>
+                        <style>
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: auto auto auto auto auto;
+                                background-color: white;
+                                padding: 5px;
+                            }
+
+                            .grid-item {
+                                background-color: rgba(255, 255, 255, 0.8);
+                                border: 1px solid rgba(0, 0, 0, 0.8);
+                                padding: 10px;
+                                font-size: 15px;
+                                text-align: center;
+                            }
+                        </style>
+                        </head>
+
+
+                        <div class="grid-container">
+                            <div class="grid-item">飲食</div>
+                            <div class="grid-item">熱量</div>
+                            <div class="grid-item">碳水</div>
+                            <div class="grid-item">脂質</div>
+                            <div class="grid-item">蛋白質</div>
+
+
+                            {% for today_breakfast in today_breakfast %}
+                                <div class="grid-item">{{ today_breakfast.menu_name }}</div>
+                                <div class="grid-item">{{ today_breakfast.kcal }}</div>
+                                <div class="grid-item">{{ today_breakfast.carbohydrate }}</div>
+                                <div class="grid-item">{{ today_breakfast.fat }}</div>
+                                <div class="grid-item">{{ today_breakfast.protein }}</div>
+                            {% endfor %}
+                        </div>
+
+                        {#                        <div class="post-meta">#}
+                        {#                            <p>By <a href="#">james smith</a></p>#}
+                        {#                            <p>3 則留言</p>#}
+                        {#                        </div>#}
+                    </div>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
+                    </button>
+                </div>
+            </div>
+            <!-- Single Blog Area  -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-blog-area blog-style-2 mb-100">
+                    <div class="single-blog-thumbnail">
+                        <img src="/static/img/blog-img/lunch.jpg" width="300" height="200" alt="">
+                        {#                            <div class="post-date">#}
+                        {#                                <a href="#">10 <span>3月</span></a>#}
+                        {#                            </div>#}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="single-blog-content mt-50">
+                        <div class="line"></div>
+                        <a href="#" class="post-tag">Lunch</a>
+                        <h4><a href="#" class="post-headline">午餐</a></h4>
+                        <div class="grid-container">
+                            <div class="grid-item">飲食</div>
+                            <div class="grid-item">熱量</div>
+                            <div class="grid-item">碳水</div>
+                            <div class="grid-item">脂質</div>
+                            <div class="grid-item">蛋白質</div>
+
+
+                            {% for today_lunch in today_lunch %}
+                                <div class="grid-item">{{ today_lunch.menu_name }}</div>
+                                <div class="grid-item">{{ today_lunch.kcal }}</div>
+                                <div class="grid-item">{{ today_lunch.carbohydrate }}</div>
+                                <div class="grid-item">{{ today_lunch.fat }}</div>
+                                <div class="grid-item">{{ today_lunch.protein }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
+                    </button>
+                </div>
+            </div>
+            <!-- Single Blog Area  -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-blog-area blog-style-2 mb-100">
+                    <div class="single-blog-thumbnail">
+                        <img src="/static/img/blog-img/dinner.jpg" width="300" height="200" alt="">
+                        {#                            <div class="post-date">#}
+                        {#                                <a href="#">10 <span>3月</span></a>#}
+                        {#                            </div>#}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="single-blog-content mt-50">
+                        <div class="line"></div>
+                        <a href="#" class="post-tag">Dinner</a>
+                        <h4><a href="#" class="post-headline">晚餐</a></h4>
+                        <div class="grid-container">
+                            <div class="grid-item">飲食</div>
+                            <div class="grid-item">熱量</div>
+                            <div class="grid-item">碳水</div>
+                            <div class="grid-item">脂質</div>
+                            <div class="grid-item">蛋白質</div>
+                            {% for today_dinner in today_dinner %}
+                                <div class="grid-item">{{ today_dinner.menu_name }}</div>
+                                <div class="grid-item">{{ today_dinner.kcal }}</div>
+                                <div class="grid-item">{{ today_dinner.carbohydrate }}</div>
+                                <div class="grid-item">{{ today_dinner.fat }}</div>
+                                <div class="grid-item">{{ today_dinner.protein }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <h4 style="text-align:center;">所有飲食紀錄</h4><br>
+    <div class="container">
+        <div class="row">
+
+            <!-- Single Blog Area  -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-blog-area blog-style-2 mb-100">
+                    <div class="single-blog-thumbnail">
+                        <img src="/static/img/blog-img/breakfast.jpg" width="300" height="200" alt="">
+                        {#                        <div class="post-date">#}
+                        {#                            #}
+                        {#                            <a href="#">10 <span>3月</span></a>#}
+                        {#                        </div>#}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="single-blog-content mt-50">
+                        <div class="line"></div>
+                        <a href="#" class="post-tag">Breakfast</a>
+                        <h4><a href="#" class="post-headline">早餐</a></h4>
+                        <style>
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: auto auto auto auto auto;
+                                background-color: white;
+                                padding: 5px;
+                            }
+
+                            .grid-item {
+                                background-color: rgba(255, 255, 255, 0.8);
+                                border: 1px solid rgba(0, 0, 0, 0.8);
+                                padding: 10px;
+                                font-size: 15px;
+                                text-align: center;
+                            }
+                        </style>
+                        </head>
+
+
+                        <div class="grid-container">
+                            <div class="grid-item">飲食</div>
+                            <div class="grid-item">熱量</div>
+                            <div class="grid-item">碳水</div>
+                            <div class="grid-item">脂質</div>
+                            <div class="grid-item">蛋白質</div>
+                            {% for breakfast in breakfast %}
+                                <div class="grid-item">{{ breakfast.menu_name }}</div>
+                                <div class="grid-item">{{ breakfast.kcal }}</div>
+                                <div class="grid-item">{{ breakfast.carbohydrate }}</div>
+                                <div class="grid-item">{{ breakfast.fat }}</div>
+                                <div class="grid-item">{{ breakfast.protein }}</div>
+                            {% endfor %}
+                        </div>
+
+                        {#                        <div class="post-meta">#}
+                        {#                            <p>By <a href="#">james smith</a></p>#}
+                        {#                            <p>3 則留言</p>#}
+                        {#                        </div>#}
+                    </div>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
+                    </button>
+                </div>
+            </div>
+            <!-- Single Blog Area  -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-blog-area blog-style-2 mb-100">
+                    <div class="single-blog-thumbnail">
+                        <img src="/static/img/blog-img/lunch.jpg" width="300" height="200" alt="">
+                        {#                            <div class="post-date">#}
+                        {#                                <a href="#">10 <span>3月</span></a>#}
+                        {#                            </div>#}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="single-blog-content mt-50">
+                        <div class="line"></div>
+                        <a href="#" class="post-tag">Lunch</a>
+                        <h4><a href="#" class="post-headline">午餐</a></h4>
+                        <div class="grid-container">
+                            <div class="grid-item">飲食</div>
+                            <div class="grid-item">熱量</div>
+                            <div class="grid-item">碳水</div>
+                            <div class="grid-item">脂質</div>
+                            <div class="grid-item">蛋白質</div>
+
+                            {% for lunch in lunch %}
+                                <div class="grid-item">{{ lunch.menu_name }}</div>
+                                <div class="grid-item">{{ lunch.kcal }}</div>
+                                <div class="grid-item">{{ lunch.carbohydrate }}</div>
+                                <div class="grid-item">{{ lunch.fat }}</div>
+                                <div class="grid-item">{{ lunch.protein }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
+                    </button>
+                </div>
+            </div>
+            <!-- Single Blog Area  -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-blog-area blog-style-2 mb-100">
+                    <div class="single-blog-thumbnail">
+                        <img src="/static/img/blog-img/dinner.jpg" width="300" height="200" alt="">
+                        {#                            <div class="post-date">#}
+                        {#                                <a href="#">10 <span>3月</span></a>#}
+                        {#                            </div>#}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="single-blog-content mt-50">
+                        <div class="line"></div>
+                        <a href="#" class="post-tag">Dinner</a>
+                        <h4><a href="#" class="post-headline">晚餐</a></h4>
+                        <div class="grid-container">
+                            <div class="grid-item">飲食</div>
+                            <div class="grid-item">熱量</div>
+                            <div class="grid-item">碳水</div>
+                            <div class="grid-item">脂質</div>
+                            <div class="grid-item">蛋白質</div>
+
+
+                            {% for dinner in dinner %}
+                                <div class="grid-item">{{ dinner.menu_name }}</div>
+                                <div class="grid-item">{{ dinner.kcal }}</div>
+                                <div class="grid-item">{{ dinner.carbohydrate }}</div>
+                                <div class="grid-item">{{ dinner.fat }}</div>
+                                <div class="grid-item">{{ dinner.protein }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Blog Wrapper End ##### -->
+
+<!-- ##### Instagram Feed Area Start ##### -->
+<div class="instagram-feed-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="insta-title">
+                    <h5>Follow us @ Instagram</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Instagram Slides -->
+    <div class="instagram-slides owl-carousel">
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food1-1.jpg" alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food2.jpg" alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food3.jpg" alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food4.jpg" alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Single Insta Feed -->
+        <div class="single-insta-feed">
+            <img src="/static/img/instagram-img/food5-1.jpg " alt="">
+            <!-- Hover Effects -->
+            <div class="hover-effects">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Instagram Feed Area End ##### -->
+
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer-area text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Footer Nav Area -->
+                <div class="classy-nav-container breakpoint-off">
                     <!-- Classy Menu -->
-                    <nav class="classy-navbar">
-
-                        <!-- Subscribe btn -->
-
+                    <nav class="classy-navbar justify-content-center">
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -104,7 +585,8 @@
                         </div>
 
                         <!-- Menu -->
-                        <div class="classy-menu" id="originalNav">
+                        <div class="classy-menu">
+
                             <!-- close btn -->
                             <div class="classycloseIcon">
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
@@ -124,285 +606,43 @@
                             </div>
                             <!-- Nav End -->
                         </div>
-<!--                        <div class="subscribe-btn">-->
-<!--                            <a href="#" class="btn subscribe-btn" data-toggle="modal" data-target="#subsModal">Subscribe</a>-->
-<!--                        </div>-->
-
                     </nav>
                 </div>
-            </div>
-        </div>
-    </header>
-    <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img" style="background-image: url(/static/img/bg-img/b1.jpg);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <div class="breadcumb-content text-center">
-                        <h2>今日攝取</h2>
-                    </div>
+                <!-- Footer Social Area -->
+                <div class="footer-social-area mt-30">
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
+                            class="fa fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
+                            class="fa fa-facebook"
+                            aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
+                            class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                    <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i
+                            class="fa fa-linkedin"
+                            aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ##### Breadcumb Area End ##### -->
 
-    <!-- ##### Blog Wrapper Start ##### -->
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-    <!-- ##### Blog Wrapper End ##### -->
+</footer>
+<!-- ##### Footer Area End ##### -->
 
-    <!-- ##### Cool Facts Area Start ##### -->
-    <div class="cool-facts-area section-padding-100-0 bg-img background-overlay" style="background-image: url(/static/img/bg-img/b4.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="single-blog-area blog-style-2 text-center mb-100">
-                        <!-- Blog Content -->
-                        <div class="single-blog-content">
-                            <div class="line"></div>
-
-                            <h4><a href="#" class="post-headline">今日營養</a></h4>
-                              </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Single Cool Facts Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-facts-area text-center mb-100">
-                        <h2><span class="counter">1200</span></h2>
-                        <p>熱量</p>
-                    </div>
-                </div>
-                <!-- Single Cool Facts Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-facts-area text-center mb-100">
-                        <h2><span class="counter">12</span></h2>
-                        <p>蛋白質</p>
-                    </div>
-                </div>
-                <!-- Single Cool Facts Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-facts-area text-center mb-100">
-                        <h2><span class="counter">9</span></h2>
-                        <p>脂質</p>
-                    </div>
-                </div>
-                <!-- Single Cool Facts Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-facts-area text-center mb-100">
-                        <h2><span class="counter">16</span></h2>
-                        <p>碳水</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Cool Facts Area End ##### -->
-
-    <!-- ##### Blog Wrapper Start ##### -->
-    <div class="blog-wrapper section-padding-100-0 clearfix">
-        <div class="container">
-            <div class="row">
-                <!-- Single Blog Area  -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-area blog-style-2 mb-100">
-                        <div class="single-blog-thumbnail">
-                            <img src="/static/img/blog-img/breakfast.jpg"width="300" height="200" alt="">
-                            <div class="post-date">
-                                <a href="#">10 <span>3月</span></a>
-                            </div>
-                        </div>
-                        <!-- Blog Content -->
-                        <div class="single-blog-content mt-50">
-                            <div class="line"></div>
-                            <a href="#" class="post-tag">Breakfast</a>
-                            <h4><a href="#" class="post-headline">早餐</a></h4>
-                            <p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-                            <div class="post-meta">
-                                <p>By <a href="#">james smith</a></p>
-                                <p>3 則留言</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Blog Area  -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-area blog-style-2 mb-100">
-                        <div class="single-blog-thumbnail">
-                            <img src="/static/img/blog-img/lunch.jpg"width="300" height="200" alt="">
-                            <div class="post-date">
-                                <a href="#">10 <span>3月</span></a>
-                            </div>
-                        </div>
-                        <!-- Blog Content -->
-                        <div class="single-blog-content mt-50">
-                            <div class="line"></div>
-                            <a href="#" class="post-tag">Lunch</a>
-                            <h4><a href="#" class="post-headline">午餐</a></h4>
-                            <p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-                            <div class="post-meta">
-                                <p>By <a href="#">james smith</a></p>
-                                <p>3 則留言</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Blog Area  -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-blog-area blog-style-2 mb-100">
-                        <div class="single-blog-thumbnail">
-                            <img src="/static/img/blog-img/dinner.jpg"width="300" height="200" alt="">
-                            <div class="post-date">
-                                <a href="#">10 <span>3月</span></a>
-                            </div>
-                        </div>
-                        <!-- Blog Content -->
-                        <div class="single-blog-content mt-50">
-                            <div class="line"></div>
-                            <a href="#" class="post-tag">Dinner</a>
-                            <h4><a href="#" class="post-headline">晚餐</a></h4>
-                            <p>Curabitur venenatis efficitur lorem sed tempor. Integer aliquet tempor cursus. Nullam vestibulum convallis risus vel condimentum. Nullam auctor lorem in libero luctus, vel volutpat quam tincidunt.</p>
-                            <div class="post-meta">
-                                <p>By <a href="#">james smith</a></p>
-                                <p>3 則留言</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Blog Wrapper End ##### -->
-
-    <!-- ##### Instagram Feed Area Start ##### -->
-    <div class="instagram-feed-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="insta-title">
-                        <h5>Follow us @ Instagram</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Instagram Slides -->
-        <div class="instagram-slides owl-carousel">
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food1-1.jpg" alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food2.jpg" alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food3.jpg" alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food4.jpg" alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-            <!-- Single Insta Feed -->
-            <div class="single-insta-feed">
-                <img src="/static/img/instagram-img/food5-1.jpg " alt="">
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Instagram Feed Area End ##### -->
-
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-
-                    <!-- Footer Nav Area -->
-                    <div class="classy-nav-container breakpoint-off">
-                        <!-- Classy Menu -->
-                        <nav class="classy-navbar justify-content-center">
-
-                            <!-- Navbar Toggler -->
-                            <div class="classy-navbar-toggler">
-                                <span class="navbarToggler"><span></span><span></span><span></span></span>
-                            </div>
-
-                            <!-- Menu -->
-                            <div class="classy-menu">
-
-                                <!-- close btn -->
-                                <div class="classycloseIcon">
-                                    <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                                </div>
-
-                                <!-- Nav Start -->
-                                <div class="classynav">
-                                    <ul>
-                                        <li><a href="/index">首頁</a></li>
-                                        <li><a href="/map">查詢店家</a></li>
-                                        <li><a href="/community">社群</a></li>
-                                        <li><a href="/analyze">分析</a></li>
-                                        <li><a href="/consult">諮詢</a></li>
-                                        <li><a href="/member">會員</a></li>
-                                        <li><a href="/logout/">登出</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Nav End -->
-                            </div>
-                        </nav>
-                    </div>
-
-                    <!-- Footer Social Area -->
-                    <div class="footer-social-area mt-30">
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-    </footer>
-    <!-- ##### Footer Area End ##### -->
-
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="/static/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="/static/js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="/static/js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="/static/js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="/static/js/active.js"></script>
+<!-- jQuery (Necessary for All JavaScript Plugins) -->
+<script src="/static/js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="/static/js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="/static/js/bootstrap.min.js"></script>
+<!-- Plugins js -->
+<script src="/static/js/plugins.js"></script>
+<!-- Active js -->
+<script src="/static/js/active.js"></script>
 
 </body>
 

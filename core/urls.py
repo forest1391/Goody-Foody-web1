@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.shortcuts import redirect
 from django.urls import path
-
-from views import auth_views,reviews_views,comment_views
+from django.conf import settings
+from django.conf.urls.static import static
+from views import auth_views,reviews_views,comment_views,post_views,restaurant_views,analyze_views,chat_views
 
 
 urlpatterns = [
@@ -25,26 +26,33 @@ urlpatterns = [
     # path('', views.index),
     path('', lambda request: redirect('/index/')),#直接導向views畫面  lambda
     path('index/', reviews_views.index),
-    path('analyze/', reviews_views.analyze),
+    path('analyze/', analyze_views.analyze),
     # path('coming/', reviews_views.coming),
     # path('contact/', reviews_views.contact),
     # path('single/', reviews_views.single),
     path('community/', reviews_views.post),
-    path('communitypage/', reviews_views.communitypage),
+    path('add_eating/', analyze_views.add_eating),
+    path('communitypage/<int:pk>/', post_views.post_detail),
+    path('information/<int:pk>/', restaurant_views.restaurant_detail),
     path('communitypage2/', reviews_views.communitypage2),
     path('Userintroduction/', reviews_views.Userintroduction),
     path('consult/', reviews_views.consult),
-    path('menu/', reviews_views.menu),
-    path('information/', reviews_views.information),
-    path('consultchatroom/', reviews_views.consultchatroom),
-    path('menuadd/', reviews_views.menuadd),
+    path('menu/<int:pk>', restaurant_views.restaurant_menu),
+    # path('information/', reviews_views.information),
+    path('consultchatroom/', chat_views.chat_and_add),
+    path('menuadd/', restaurant_views.add_menu),
     path('Storeinformation/', reviews_views.storeinformation),
     path('map/', reviews_views.map),
     path('member/', reviews_views.member),
 
     path('verify_diet/', reviews_views.verify_diet),
     path('verify_store/', reviews_views.verify_store),
-
+    path('post/add/', reviews_views.add),
+    path('tag/add/', reviews_views.add_tag),
+    path('eating/add/', reviews_views.add_eating),
+    path('report/add/', reviews_views.add_report),
+    path('information/add/', restaurant_views.add_information),
+    path('report_done/', reviews_views.report_done),
 
     path('login/', auth_views.login),
     path('logout/', auth_views.logout),
@@ -55,8 +63,9 @@ urlpatterns = [
     # path('comment/add/',comment_views.comment_add),
     # path('regist40/', comment_views.regist40),
     path('deletemsg40/', comment_views.deletemsg40),
+    # path('add_eating_item/<int:no>/', )
     # <test>
 
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
