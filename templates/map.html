@@ -95,6 +95,67 @@
                                                                 height="100" alt=""></a>
                     <h3>Goody Foody</h3>
                 </div>
+
+
+                <!-- Widget Area -->
+                <div class="sidebar-widget-area">
+                    <h5 class="title subscribe-title">新增店家資訊</h5>
+                    <div class="widget-content">
+                        <form action="#" class="newsletterForm">
+                            <button type="submit" class="btn original-btn">
+                                <a href="/Storeinformation">前往新增店家資訊</a>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {#                        <div class="sidebar-widget-area">#}
+        {#                            <h5 class="title">標籤</h5>#}
+        {#                            <div class="widget-content">#}
+        {#                                <ul class="tags">#}
+        {#                                    <li><a href="#">日式料理</a></li>#}
+        {#                                    <li><a href="#">日式點心</a></li>#}
+        {#                                    <li><a href="#">水餃、鍋貼</a></li>#}
+        {#                                    <li><a href="#">小火鍋</a></li>#}
+        {#                                    <li><a href="#">你餓了嗎</a></li>#}
+        {#                                    <li><a href="#">燒臘便當</a></li>#}
+        {#                                    <li><a href="#">北京烤鴨</a></li>#}
+        {#                                    <li><a href="#">韓式料理</a></li>#}
+        {#                                    <li><a href="#">高檔餐廳</a></li>#}
+        {#                                </ul>#}
+        {#                            </div>#}
+
+        <div class="sidebar-widget-area">
+            <h5 class="title">標籤</h5>
+            <div class="widget-content">
+                <ul class="tags">
+                    {% for tag in tags %}
+                        <li><a href="#">{{ tag.tag_name }}</a></li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+            <button type="submit" class="btn original-btn">
+                <a href="/tag/add">新增標籤</a>
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- ##### Blog Wrapper End ##### -->
+
+<!-- ##### Instagram Feed Area Start ##### -->
+<div class="instagram-feed-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="insta-title">
+                    <h5>Follow us @ Instagram</h5>
+                </div>
             </div>
         </div>
     </div>
