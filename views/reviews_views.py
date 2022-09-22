@@ -281,6 +281,16 @@ def menuadd(request):
     return render(request, 'menuadd.html')
 
 @user_login_required
+def chat(request):
+    r = requests.get(
+        f'{root}/chat/all/',
+        cookies={'sessionid': request.COOKIES['sessionid']}
+    )
+    result = r.json()
+    chats = result['data']
+    return render(request, 'consultchatroom.html', {'chats': chats})
+
+@user_login_required
 def storeinformation(request):
     return render(request, 'Storeinformation.html')
 
