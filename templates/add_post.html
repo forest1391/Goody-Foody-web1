@@ -83,8 +83,8 @@
 
     <!-- Logo Area -->
     <div class="logo-area text-center">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
+        <div class="container h-200">
+            <div class="row h-200 align-items-center">
                 <div class="col-12">
                     <a href="/index" class="original-logo"><img src="/static/img/bg-img/goody.jpg" width="100"
                                                                 height="100" alt=""></a>
@@ -128,6 +128,10 @@
                                 <li><a href="/logout/">登出</a></li>
                             </ul>
                         </div>
+
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
                         <!-- Nav End -->
                     </div>
                     <!--                        <div class="subscribe-btn">-->
@@ -139,151 +143,159 @@
         </div>
     </div>
 </header>
-<!-- ##### Header Area End ##### -->
 
+
+<!-- ##### Header Area End ##### -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-12 col-md-10 col-lg-9">
+                <div class="contact-form">
+                    <h5>新增發文</h5>
+                    <!-- Contact Form -->
+
+                    <form action="/post/add/" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+
+                            {#測試#}
+                            {#                            <div class="form-group">#}
+                            {#                                 <label for="exampleFormControlInput1">編號</label>#}
+                            {#                                 <input class="form-control" id="exampleFormControlInput1" placeholder="編號" name="post_id" required>#}
+                            {#                            </div>#}
+                            {##}
+                            {#                             <div class="form-group">#}
+                            {#                                <label for="exampleFormControlInput2">標題</label>#}
+                            {#                                <input class="form-control" id="exampleFormControlInput2" placeholder="標題" name="title" required>#}
+                            {#                             </div>#}
+                            {#                             <div class="form-group">#}
+                            {#                                <label for="exampleFormControlInput2">內文</label>#}
+                            {#                                <input class="form-control" id="exampleFormControlInput3" placeholder="內文" name="content" required>#}
+                            {#                             </div>#}
+                            {#測試#}
+
+
+                            <div class="col-12 col-md-6">
+                                <div class="group">
+                                    <input class="form-control" id="exampleFormControlInput1" name="post_id" required>
+                                    {#                                        <input type="text" name="title" id="title" required>#}
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>編號(測試)</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="group">
+                                    {#                                        <input type="text" name="title" id="title" required>#}
+                                    <input class="form-control" id="exampleFormControlInput1" name="title" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>標題</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="group">
+                                    {#                                        <input type="text" name="content" id="content" required>#}
+                                    <input class="form-control" id="exampleFormControlInput1" name="content" required>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>內文</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <div class="group">
+                                    <input type="file" name="user_image"><br><br>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn original-btn">發文</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 <!-- ##### Hero Area Start ##### -->
 
-<!-- ##### Hero Area End ##### -->
-
-<!-- ##### Blog Wrapper Start ##### -->
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-lg-9">
-
-            <!-- Single Blog Area  -->
-            {% for post in posts %}
-                <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" data-wow-delay="0.2s"
-                     data-wow-duration="1000ms">
-                    <div class="row align-items-center">
-
-                        <div class="col-12 col-md-6">
-                            <div class="single-blog-thumbnail">
-                                <a href="/communitypage"> <img src="/static/img/日式和果子/IMG_8431.jpeg" alt=""></a>
-                                <div class="post-date">
-                                    <a href="#">3 <span>月</span></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6">
-                            <!-- Blog Content -->
-                            <div class="single-blog-content">
-                                <div class="line"></div>
-                                <a href="#" class="post-tag">日式料理</a>
-                                <h4><a href="/communitypage" class="post-headline">{{ post.title }}</a></h4>
-                                <p>{{ post.content }}</p>
-                                <div class="post-meta">
-                                    <p>By <a href="/Userintroduction">森林木</a></p>
-                                    <p>3 則留言</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            {% endfor %}
-            <!-- Single Blog Area  -->
-
-
-            <div class="sidebar-widget-area">
-                <h5 class="title subscribe-title">新增發文</h5>
-                <div class="widget-content">
-                    {#                                <form action="#" class="newsletterForm">#}
-                    <button type="submit" class="btn original-btn">
-                        <a href="/post/add">發文</a>
-                    </button>
-                    {#                                </form>#}
-                </div>
-            </div>
-
-            <!-- Single Blog Area  -->
-
-
-            <!-- Single Blog Post -->
-
-
-            <!-- Widget Area -->
-            <div class="sidebar-widget-area">
-                <h5 class="title">標籤</h5>
-                <div class="widget-content">
-                    <ul class="tags">
-                        {% for tag in tags %}
-                            <li><a href="#">{{ tag.tag_name }}</a></li>
-                        {% endfor %}
-
-                    </ul>
-                </div>
-                <button type="submit" class="btn original-btn">
-                    <a href="/tag/add">新增標籤</a>
-                </button>
-            </div>
-
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- ##### Blog Wrapper End ##### -->
-
 <!-- ##### Instagram Feed Area Start ##### -->
-<div class="instagram-feed-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="insta-title">
-                    <h5>更多討論</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Instagram Slides -->
-    <div class="instagram-slides owl-carousel">
-        <!-- Single Insta Feed -->
-        <div class="single-insta-feed">
-            <img src="/static/img/instagram-img/1.png" alt="">
-            <!-- Hover Effects -->
-            <div class="hover-effects">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-            </div>
-        </div>
-        <!-- Single Insta Feed -->
-        <div class="single-insta-feed">
-            <img src="static/img/instagram-img/2.png" alt="">
-            <!-- Hover Effects -->
-            <div class="hover-effects">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-            </div>
-        </div>
-        <!-- Single Insta Feed -->
-        <div class="single-insta-feed">
-            <img src="/static/img/instagram-img/3.png" alt="">
-            <!-- Hover Effects -->
-            <div class="hover-effects">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-            </div>
-        </div>
-        <!-- Single Insta Feed -->
-        <div class="single-insta-feed">
-            <img src="/static/img/instagram-img/4.png" alt="">
-            <!-- Hover Effects -->
-            <div class="hover-effects">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-            </div>
-        </div>
-        <!-- Single Insta Feed -->
-        <div class="single-insta-feed">
-            <img src="/static/img/instagram-img/5.png" alt="">
-            <!-- Hover Effects -->
-            <div class="hover-effects">
-                <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>
-            </div>
-        </div>
-        <!-- Single Insta Feed -->
-
-    </div>
-</div>
+<!--    <div class="instagram-feed-area">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-12">-->
+<!--                    <div class="insta-title">-->
+<!--                        <h5>Follow us @ Instagram</h5>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; Instagram Slides &ndash;&gt;-->
+<!--        <div class="instagram-slides owl-carousel">-->
+<!--            &lt;!&ndash; Single Insta Feed &ndash;&gt;-->
+<!--            <div class="single-insta-feed">-->
+<!--                <img src="/static/img/instagram-img/1.png" alt="">-->
+<!--                &lt;!&ndash; Hover Effects &ndash;&gt;-->
+<!--                <div class="hover-effects">-->
+<!--                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Single Insta Feed &ndash;&gt;-->
+<!--            <div class="single-insta-feed">-->
+<!--                <img src="/static/img/instagram-img/2.png" alt="">-->
+<!--                &lt;!&ndash; Hover Effects &ndash;&gt;-->
+<!--                <div class="hover-effects">-->
+<!--                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Single Insta Feed &ndash;&gt;-->
+<!--            <div class="single-insta-feed">-->
+<!--                <img src="/static/img/instagram-img/3.png" alt="">-->
+<!--                &lt;!&ndash; Hover Effects &ndash;&gt;-->
+<!--                <div class="hover-effects">-->
+<!--                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Single Insta Feed &ndash;&gt;-->
+<!--            <div class="single-insta-feed">-->
+<!--                <img src="/static/img/instagram-img/4.png" alt="">-->
+<!--                &lt;!&ndash; Hover Effects &ndash;&gt;-->
+<!--                <div class="hover-effects">-->
+<!--                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Single Insta Feed &ndash;&gt;-->
+<!--            <div class="single-insta-feed">-->
+<!--                <img src="/static/img/instagram-img/5.png" alt="">-->
+<!--                &lt;!&ndash; Hover Effects &ndash;&gt;-->
+<!--                <div class="hover-effects">-->
+<!--                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Single Insta Feed &ndash;&gt;-->
+<!--            <div class="single-insta-feed">-->
+<!--                <img src="/static/img/instagram-img/6.png" alt="">-->
+<!--                &lt;!&ndash; Hover Effects &ndash;&gt;-->
+<!--                <div class="hover-effects">-->
+<!--                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Single Insta Feed &ndash;&gt;-->
+<!--            <div class="single-insta-feed">-->
+<!--                <img src="/static/img/instagram-img/7.png" alt="">-->
+<!--                &lt;!&ndash; Hover Effects &ndash;&gt;-->
+<!--                <div class="hover-effects">-->
+<!--                    <a href="#" class="d-flex align-items-center justify-content-center"><i class="fa fa-instagram"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 <!-- ##### Instagram Feed Area End ##### -->
 
 <!-- ##### Footer Area Start ##### -->
