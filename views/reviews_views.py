@@ -158,7 +158,7 @@ def consult(request):
 @user_login_required
 def menu(request):
     r = requests.get(
-        f'{root}/menu_review/all/',
+        f'{root}/menu/all/',
         cookies={'sessionid': request.COOKIES['sessionid']}
     )
     result = r.json()
