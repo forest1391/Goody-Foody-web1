@@ -33,15 +33,15 @@ def comment(request):
     if request.method == 'POST':
         restaurant_msg_id=request.POST['restaurant_msg_id']
         restaurant_id = request.POST['restaurant_id']
-        account = request.POST['user_id']
+        account = request.COOKIES['user_id']
         content	 = request.POST['content']
-        time = request.POST['time']
+        # time = request.POST['time']
         data = {
             "restaurant_msg_id":restaurant_msg_id,
             "restaurant_id ":restaurant_id,
             "account":account,
             "content":content,
-            "time": time
+            # "time": time
         }
         r = requests.post(
             f'{root}/add/',
@@ -58,6 +58,7 @@ def comment(request):
 
     result = r.json()
     restaurant_msgs = result['data']
+    print(restaurant_msgs)
     return render(request, 'comment.html', {'restaurant_msgs': restaurant_msgs})
 
 
