@@ -53,7 +53,7 @@ urlpatterns = [
     # <test>
     path('comment/', comment_views.comment),
     # path('comment/add/',comment_views.comment_add),
-    path('regist40/', comment_views.regist40),
+    # path('regist40/', comment_views.regist40),
     path('deletemsg40/', comment_views.deletemsg40),
     # <test>
 
