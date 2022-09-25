@@ -81,7 +81,7 @@
             <div class="container h-200">
                 <div class="row h-200 align-items-center">
                     <div class="col-12">
-                        <a href="index.html" class="original-logo"><img src="/static/img/blog-img/r1.jpg" width="200" height="200" alt=""></a>
+                        <a href="/index" class="original-logo"><img src="/static/img/blog-img/r1.jpg" width="200" height="200" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -137,29 +137,46 @@
         </div>
         <br>
         </br>
+        <!-- <test> -->
+        <button onclick="mToday()">現在時間:</button><span id="mday"></span>
+            <p>
+                <br>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                 我要留言
+                </button>
+                <br>
+            </p>
+              <div class="collapse" id="collapseExample">
+                  <!-- </test> -->
         <form action="/comment/" method="post">
-        {% csrf_token %}
-        <div class="group">
-            <input type="text" name="restaurant_msg_id" id="restaurant_msg_id" placeholder="流水號">
-            <br>
-            <input type="text" name="restaurant_id" id="restaurant_id" placeholder="留言ID">
-            <br>
-            <input type="text" name="user_id" id="account" placeholder="帳號">
-            <br>
-            <input type="text" name="time" id="time" placeholder="時間">
-            <br>
-            <input type="text" name="content" id="content" placeholder="留言">
-
-            <button type="button" class="btn">取消</button>
-            <button type="submit" class="btn btn-info">送出</button>
-            <!-- <testbtn> -->
-            <a href="/deletemsg40/">
-                <button type="button" class="btn">刪除</button>
-            </a>
-            <!-- <testbtn> -->
-        </div>
-        </form>  
-            <!-- test -->
+            {% csrf_token %}
+            <div class="group">
+                <input type="text" name="restaurant_msg_id" id="restaurant_msg_id" placeholder="流水號">
+                <br>
+                <input type="text" name="restaurant_id" id="restaurant_id" placeholder="留言ID">
+                <!-- <br> -->
+                <!-- <input type="text" name="user_id" id="account" placeholder="帳號"> -->
+                <!-- <br> -->
+                <!-- <input type="text" name="time" id="time" placeholder="時間"> -->
+                <br>
+                <input type="text" name="content" id="content" placeholder="留言">
+                
+                 
+                <a href="/comment/">
+                    <button type="button" class="btn">取消</button>
+                </a>
+                <button type="submit" class="btn btn-info">送出</button>
+    
+                <!-- <testbtn> -->
+                <a href="/deletemsg40/">
+                    <button type="button" class="btn">刪除</button>
+                </a>
+                <!-- <testbtn> -->
+            </div>
+            </form>  
+                <!-- test -->
+              </div>
+      
             <table class="table">
                 <thead>
                     <!-- <test> -->
@@ -326,6 +343,8 @@
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="/static/js/nowtime.js"></script>
     <!-- ##### Footer Area End ##### -->
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
@@ -338,6 +357,7 @@
     <script src="/static/js/plugins.js"></script>
     <!-- Active js -->
     <script src="/static/js/active.js"></script>
+    
 
 </body>
 
