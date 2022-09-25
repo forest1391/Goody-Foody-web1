@@ -4,7 +4,8 @@ from django.shortcuts import render, redirect
 from core.settings import API_URL as root
 from utils.decorators import user_login_required
 
-root += 'auth'
+root += '/auth'
+
 
 def login(request):
     if 'user_id' in request.COOKIES:
@@ -12,22 +13,13 @@ def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
 
-    btn_value = None
-    if 'user1' in request.POST:
-        btn_value = request.POST['user1']
-    elif 'user2' in request.POST:
-        btn_value = request.POST['user2']
-    elif 'user3' in request.POST:
-        btn_value = request.POST['user3']
-
     # html
     user_id = request.POST['account']
     pwd = request.POST['password']
     # api
     data = {
         'account': user_id,
-        'password': pwd,
-        'btn_value': btn_value
+        'password': pwd
     }
     r = requests.post(
         f'{root}/login/',
@@ -87,7 +79,7 @@ def register(request):
     if result['success'] is True:
         ret = redirect('/login/')
         ret.set_cookie('sessionid', result['sessionid'])
-        ret.set_cookie('user_id', user_id)
+        ret.set_cookie('user_id', account)
         return ret
     else:
         return redirect('/login/')

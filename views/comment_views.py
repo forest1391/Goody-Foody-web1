@@ -1,11 +1,15 @@
 import requests
 from django.shortcuts import render, redirect
+
 from core.settings import API_URL as root
 from utils.decorators import user_login_required
 
-root += 'comment'
+root += '/comment'
+
+
 def regist40(request):
     return render(request, 'regist40.html')
+
 
 def deletemsg40(request):
     if request.method == 'GET':
@@ -14,7 +18,7 @@ def deletemsg40(request):
     restaurant_msg_id = request.POST['restaurant_msg_id']
     data = {
         'account': request.COOKIES['user_id'],
-        "restaurant_msg_id":restaurant_msg_id
+        "restaurant_msg_id": restaurant_msg_id
     }
 
     r = requests.post(
@@ -25,13 +29,15 @@ def deletemsg40(request):
     result = r.json()
     return redirect('/comment/')
     # return render(request, 'deletemsg40.html', {'message': result['message']})
+
+
 #   <test>
 
 # <test2>
 @user_login_required
 def comment(request):
     if request.method == 'POST':
-        restaurant_msg_id=request.POST['restaurant_msg_id']
+        restaurant_msg_id = request.POST['restaurant_msg_id']
         restaurant_id = request.POST['restaurant_id']
         account = request.COOKIES['user_id']
         content	 = request.POST['content']
@@ -45,7 +51,7 @@ def comment(request):
         }
         r = requests.post(
             f'{root}/add/',
-            data=data, 
+            data=data,
             cookies={'sessionid': request.COOKIES['sessionid']}
         )
         print(r.json())
@@ -60,8 +66,6 @@ def comment(request):
     restaurant_msgs = result['data']
     print(restaurant_msgs)
     return render(request, 'comment.html', {'restaurant_msgs': restaurant_msgs})
-
-
 
 # @user_login_required
 # def comment_add(request):
@@ -84,7 +88,7 @@ def comment(request):
 #     )
 #     result = r.json()
 #     return render(request, 'comment.html', {'message': result['message']})
-    
+
 
 # @user_login_required
 # def deletemsg40(request):

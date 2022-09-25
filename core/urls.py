@@ -29,7 +29,7 @@ urlpatterns = [
     # path('coming/', reviews_views.coming),
     # path('contact/', reviews_views.contact),
     # path('single/', reviews_views.single),
-    path('community/', reviews_views.community),
+    path('community/', reviews_views.post),
     path('communitypage/', reviews_views.communitypage),
     path('communitypage2/', reviews_views.communitypage2),
     path('Userintroduction/', reviews_views.Userintroduction),
@@ -41,19 +41,22 @@ urlpatterns = [
     path('Storeinformation/', reviews_views.storeinformation),
     path('map/', reviews_views.map),
     path('member/', reviews_views.member),
-    path('register/', reviews_views.register),
+
     path('verify_diet/', reviews_views.verify_diet),
     path('verify_store/', reviews_views.verify_store),
 
 
     path('login/', auth_views.login),
     path('logout/', auth_views.logout),
-    
+    path('register/', auth_views.register),
+
     # <test>
     path('comment/', comment_views.comment),
     # path('comment/add/',comment_views.comment_add),
     path('regist40/', comment_views.regist40),
     path('deletemsg40/', comment_views.deletemsg40),
     # <test>
-    
+
 ]
+
+
