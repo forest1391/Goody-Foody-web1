@@ -127,18 +127,19 @@
 
 
     <!-- ##### Header Area End ##### -->
- <div class="comment_area clearfix mt-70">
+ <!-- <div class="comment_area clearfix mt-70"> -->
+    
+<div class="col-md-12">
         <h5 class="title">留言</h5>
 
         <ol>
 
         <div class="comment-author">
-            <img src="/static/img/使用者頭像/1.jpg" width="5%"> 
+            <img src="/static/img/使用者頭像/1.jpg" width="8%"> 
         </div>
-        <br>
         </br>
         <!-- <test> -->
-        <button onclick="mToday()">現在時間:</button><span id="mday"></span>
+        <!-- <button onclick="mToday()">現在時間:</button><span id="mday"></span> -->
             <p>
                 <br>
                 <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -146,90 +147,92 @@
                 </button>
                 <br>
             </p>
-              <div class="collapse" id="collapseExample">
-                  <!-- </test> -->
-        <form action="/comment/" method="post">
-            {% csrf_token %}
-            <div class="group">
-                <input type="text" name="restaurant_msg_id" id="restaurant_msg_id" placeholder="流水號">
-                <br>
-                <input type="text" name="restaurant_id" id="restaurant_id" placeholder="留言ID">
-                <!-- <br> -->
-                <!-- <input type="text" name="user_id" id="account" placeholder="帳號"> -->
-                <!-- <br> -->
-                <!-- <input type="text" name="time" id="time" placeholder="時間"> -->
-                <br>
-                <input type="text" name="content" id="content" placeholder="留言">
-                
-                 
-                <a href="/comment/">
-                    <button type="button" class="btn">取消</button>
-                </a>
-                <button type="submit" class="btn btn-info">送出</button>
-    
-                <!-- <testbtn> -->
-                <a href="/deletemsg40/">
-                    <button type="button" class="btn">刪除</button>
-                </a>
-                <!-- <testbtn> -->
-            </div>
-            </form>  
-                <!-- test -->
-              </div>
-      
-            <table class="table">
-                <thead>
-                    <!-- <test> -->
-                    <a class="nav-link" href="/comment/"></a>
-                    <!-- </test> -->
-                <tr>
-                    <th>
-                        自動編號(流水號)
-                    </th>
-                    <!-- <th>
-                        餐廳編號
-                    </th> -->
-                    <th>
-                        留言者
-                    </th>
-                    <th>
-                        內容
-                    </th>
-                    <th>
-                        時間
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for restaurant_msg in restaurant_msgs %}
+    <div class="container">  
+        <div class="collapse" id="collapseExample">
+            <form action="/comment/" method="post">
+                {% csrf_token %}
+                <div class="group">
+                    <input type="text" name="restaurant_msg_id" id="restaurant_msg_id" placeholder="流水號">
+                    <br>
+                    <input type="text" name="restaurant_id" id="restaurant_id" placeholder="留言ID">
+                    <!-- <br> -->
+                    <!-- <input type="text" name="user_id" id="account" placeholder="帳號"> -->
+                    <!-- <br> -->
+                    <!-- <input type="text" name="time" id="time" placeholder="時間"> -->
+                    <br>
+                    <input type="text" name="content" id="content" placeholder="留言">
+                    
+                    
+                    <a href="/comment/">
+                        <button type="button" class="btn">取消</button>
+                    </a>
+                    <button type="submit" class="btn btn-info">送出</button>
+        
+                    <!-- <testbtn> -->
+                    <a href="/deletemsg40/">
+                        <button type="button" class="btn">刪除</button>
+                    </a>
+                    <!-- <testbtn> -->
+                </div>
+                </form>  
+                    <!-- test -->
+                </div>
+                <table class="table">
+                    <thead>
+                        <!-- <test> -->
+                        <a class="nav-link" href="/comment/"></a>
+                        <!-- </test> -->
                     <tr>
-                        <td>
-                            <a >
-                                {{ restaurant_msg.restaurant_msg_id }}
-                            </a>
-                        </td>
-                        <!-- <td>
-                            {{ restaurant_msg.restaurant_id }}
-                        </td> -->
-                        <td>
-                            {{ restaurant_msg.account }}
-                        </td>
-                        <td>
-                            {{ restaurant_msg.content }}
-                        </td>
-                        <td>
-                            {{ restaurant_msg.time }}
-                        </td>
+                        <th>
+                            自動編號(流水號)
+                        </th>
+                        <!-- <th>
+                            餐廳編號
+                        </th> -->
+                        <th>
+                            留言者
+                        </th>
+                        <th>
+                            內容
+                        </th>
+                        <th>
+                            時間
+                        </th>
                     </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-            <!-- test -->
-            
+                    </thead>
+                    <tbody>
+                    {% for restaurant_msg in restaurant_msgs %}
+                        <tr>
+                            <td>
+                                <a >
+                                    {{ restaurant_msg.restaurant_msg_id }}
+                                </a>
+                            </td>
+                            <!-- <td>
+                                {{ restaurant_msg.restaurant_id }}
+                            </td> -->
+                            <td>
+                                {{ restaurant_msg.account }}
+                            </td>
+                            <td>
+                                {{ restaurant_msg.content }}
+                            </td>
+                            <td>
+                                {{ restaurant_msg.time }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+    </div>
+
+<div class="container">    
+    <div class="col-md-6">
+            <!-- test -->    
         </ol>
     </div>
     <!-- ##### Hero Area Start ##### -->
-
+</div>
     <!-- ##### Instagram Feed Area Start ##### -->
     <div class="instagram-feed-area">
         <div class="container">
@@ -242,6 +245,8 @@
             </div>
         </div>
         <!-- Instagram Slides -->
+
+<div class="col-md-12"></div>
         <div class="instagram-slides owl-carousel">
             <!-- Single Insta Feed -->
             <div class="single-insta-feed">
@@ -285,6 +290,7 @@
             </div>
         </div>
     </div>
+</div>
     <!-- ##### Instagram Feed Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
