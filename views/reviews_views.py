@@ -270,7 +270,7 @@ def information(request):
 
 @user_login_required
 def comment(request):
-    return render(request, 'comment.html')
+    return render(request, 'comment31.html')
 
 @user_login_required
 def consultchatroom(request):

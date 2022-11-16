@@ -79,7 +79,7 @@ def add_menu_item(request, no):
         'fat':detail['fat'],
         'protein':detail['protein'],
     }
-    
+
     # result = r.json()
     # true -> detail data
 
