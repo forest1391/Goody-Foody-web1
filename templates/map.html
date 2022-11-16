@@ -149,7 +149,9 @@
                 </div>
             </div>
             <div class="sidebar-widget-area">
-                <form action="#" class="search-form">
+                <!-- <form class="form-inline float-right mb-4" action="/deletemsg40/" method="post" -->
+                <form action="/map/" class="search-form" method="post">
+                    {% csrf_token %}
                     <input type="search" name="search" id="searchForm" placeholder="尋找店家、標籤">
                     <input type="submit" value="submit">
                 </form>
