@@ -142,17 +142,17 @@
 <!-- ##### Header Area End ##### -->
 
 <!-- ##### Breadcumb Area Start ##### -->
-<div class="breadcumb-area bg-img" style="background-image: url(/static/img/bg-img/b1.jpg);">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <div class="breadcumb-content text-center">
-                    <h2>今日攝取</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{#<div class="breadcumb-area bg-img" style="background-image: url(/static/img/bg-img/b1.jpg);">#}
+{#    <div class="container h-100">#}
+{#        <div class="row h-100 align-items-center">#}
+{#            <div class="col-12">#}
+{#                <div class="breadcumb-content text-center">#}
+{#                    <h2>今日攝取</h2>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
 <!-- ##### Breadcumb Area End ##### -->
 
 <!-- ##### Blog Wrapper Start ##### -->
@@ -170,51 +170,70 @@
                     <div class="single-blog-content">
                         <div class="line"></div>
 
-                        <h4><a href="#" class="post-headline">今日營養</a></h4>
+
+                        <h2 id="current_date" class="post-headline"></h2>
+
+                        <script>
+                            date = new Date();
+                            year = date.getFullYear();
+                            month = date.getMonth() + 1;
+                            day = date.getDate();
+                            document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;
+                        </script>
+                         <h4><a href="#" class="post-headline">今日攝取</a></h4>
                     </div>
                 </div>
             </div>
         </div>
 
-        {% for eating in eatings %}
-            <div class="row">
-                <!-- Single Cool Facts Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-facts-area text-center mb-100">
-                        <h2><span class="counter">{{ eating.kcal }}</span></h2>
-                        <p>熱量</p>
-                    </div>
-                </div>
-                <!-- Single Cool Facts Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-facts-area text-center mb-100">
-                        <h2><span class="counter">{{ eating.protein }}</span></h2>
-                        <p>蛋白質</p>
-                    </div>
-                </div>
-                <!-- Single Cool Facts Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-facts-area text-center mb-100">
-                        <h2><span class="counter">{{ eating.fat }}</span></h2>
-                        <p>脂質</p>
-                    </div>
-                </div>
-                <!-- Single Cool Facts Area -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-facts-area text-center mb-100">
-                        <h2><span class="counter">{{ eating.carbohydrate }}</span></h2>
-                        <p>碳水</p>
-                    </div>
+
+        <div class="row">
+            <!-- Single Cool Facts Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-facts-area text-center mb-100">
+                    <h2><span class="counter">{{ kcal }}</span></h2>
+                    <p>熱量</p>
                 </div>
             </div>
-        {% endfor %}
+            <!-- Single Cool Facts Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-facts-area text-center mb-100">
+                    <h2><span class="counter">{{ protein }}</span></h2>
+                    <p>蛋白質</p>
+                </div>
+            </div>
+            <!-- Single Cool Facts Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-facts-area text-center mb-100">
+                    <h2><span class="counter">{{ fat }}</span></h2>
+                    <p>脂質</p>
+                </div>
+            </div>
+            <!-- Single Cool Facts Area -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single-cool-facts-area text-center mb-100">
+                    <h2><span class="counter">{{ carbohydrate }}</span></h2>
+                    <p>碳水</p>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
-<!-- ##### Cool Facts Area End ##### -->
+
 
 <!-- ##### Blog Wrapper Start ##### -->
 <div class="blog-wrapper section-padding-100-0 clearfix">
+    <!-- ##### Cool Facts Area End ##### -->
+    {#        <h2 id="current_date" style="text-align:center"></h2>#}
+    {#    #}
+    {#        <script>#}
+    {#            date = new Date();#}
+    {#            year = date.getFullYear();#}
+    {#            month = date.getMonth() + 1;#}
+    {#            day = date.getDate();#}
+    {#            document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;#}
+    {#        </script>#}
     <div class="container">
         <div class="row">
             <!-- Single Blog Area  -->
@@ -222,9 +241,10 @@
                 <div class="single-blog-area blog-style-2 mb-100">
                     <div class="single-blog-thumbnail">
                         <img src="/static/img/blog-img/breakfast.jpg" width="300" height="200" alt="">
-                        <div class="post-date">
-                            <a href="#">10 <span>3月</span></a>
-                        </div>
+                        {#                        <div class="post-date">#}
+                        {#                            #}
+                        {#                            <a href="#">10 <span>3月</span></a>#}
+                        {#                        </div>#}
                     </div>
                     <!-- Blog Content -->
                     <div class="single-blog-content mt-50">
@@ -250,7 +270,6 @@
                         </head>
 
 
-
                         <div class="grid-container">
                             <div class="grid-item"></div>
                             <div class="grid-item">熱量</div>
@@ -263,21 +282,21 @@
                             <div class="grid-item">94</div>
                             <div class="grid-item">13</div>
                             <div class="grid-item">2</div>
-                            {% for eating in eatings %}
-                            <div class="grid-item">{{ eating.eat_type_id }}</div>
-                            <div class="grid-item">{{ eating.kcal }}</div>
-                            <div class="grid-item">{{ eating.carbohydrate }}</div>
-                            <div class="grid-item">{{ eating.fat }}</div>
-                            <div class="grid-item">{{ eating.protein }}</div>
+                            {% for breakfast in breakfast %}
+                                <div class="grid-item">menu_name</div>
+                                <div class="grid-item">{{ breakfast.kcal }}</div>
+                                <div class="grid-item">{{ breakfast.carbohydrate }}</div>
+                                <div class="grid-item">{{ breakfast.fat }}</div>
+                                <div class="grid-item">{{ breakfast.protein }}</div>
                             {% endfor %}
                         </div>
 
-{#                        <div class="post-meta">#}
-{#                            <p>By <a href="#">james smith</a></p>#}
-{#                            <p>3 則留言</p>#}
-{#                        </div>#}
+                        {#                        <div class="post-meta">#}
+                        {#                            <p>By <a href="#">james smith</a></p>#}
+                        {#                            <p>3 則留言</p>#}
+                        {#                        </div>#}
                     </div>
-                   <button type="submit" class="btn original-btn">
+                    <button type="submit" class="btn original-btn">
                         <a href="/eating/add">新增飲食</a>
                     </button>
                 </div>
@@ -287,16 +306,16 @@
                 <div class="single-blog-area blog-style-2 mb-100">
                     <div class="single-blog-thumbnail">
                         <img src="/static/img/blog-img/lunch.jpg" width="300" height="200" alt="">
-                        <div class="post-date">
-                            <a href="#">10 <span>3月</span></a>
-                        </div>
+                        {#                            <div class="post-date">#}
+                        {#                                <a href="#">10 <span>3月</span></a>#}
+                        {#                            </div>#}
                     </div>
                     <!-- Blog Content -->
                     <div class="single-blog-content mt-50">
                         <div class="line"></div>
                         <a href="#" class="post-tag">Lunch</a>
                         <h4><a href="#" class="post-headline">午餐</a></h4>
-                          <div class="grid-container">
+                        <div class="grid-container">
                             <div class="grid-item"></div>
                             <div class="grid-item">熱量</div>
                             <div class="grid-item">碳水</div>
@@ -308,17 +327,17 @@
                             <div class="grid-item">94</div>
                             <div class="grid-item">13</div>
                             <div class="grid-item">2</div>
-                            {% for eating in eatings %}
-                            <div class="grid-item">{{ eating.eat_type_id }}</div>
-                            <div class="grid-item">{{ eating.kcal }}</div>
-                            <div class="grid-item">{{ eating.carbohydrate }}</div>
-                            <div class="grid-item">{{ eating.fat }}</div>
-                            <div class="grid-item">{{ eating.protein }}</div>
+                            {% for lunch in lunch %}
+                                <div class="grid-item">menu_name</div>
+                                <div class="grid-item">{{ lunch.kcal }}</div>
+                                <div class="grid-item">{{ lunch.carbohydrate }}</div>
+                                <div class="grid-item">{{ lunch.fat }}</div>
+                                <div class="grid-item">{{ lunch.protein }}</div>
                             {% endfor %}
                         </div>
                     </div>
-                   <button type="submit" class="btn original-btn">
-                        <a href="/add/eating">新增飲食</a>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
                     </button>
                 </div>
             </div>
@@ -327,16 +346,16 @@
                 <div class="single-blog-area blog-style-2 mb-100">
                     <div class="single-blog-thumbnail">
                         <img src="/static/img/blog-img/dinner.jpg" width="300" height="200" alt="">
-                        <div class="post-date">
-                            <a href="#">10 <span>3月</span></a>
-                        </div>
+                        {#                            <div class="post-date">#}
+                        {#                                <a href="#">10 <span>3月</span></a>#}
+                        {#                            </div>#}
                     </div>
                     <!-- Blog Content -->
                     <div class="single-blog-content mt-50">
                         <div class="line"></div>
                         <a href="#" class="post-tag">Dinner</a>
                         <h4><a href="#" class="post-headline">晚餐</a></h4>
-                           <div class="grid-container">
+                        <div class="grid-container">
                             <div class="grid-item"></div>
                             <div class="grid-item">熱量</div>
                             <div class="grid-item">碳水</div>
@@ -348,17 +367,17 @@
                             <div class="grid-item">94</div>
                             <div class="grid-item">13</div>
                             <div class="grid-item">2</div>
-                            {% for eating in eatings %}
-                            <div class="grid-item">{{ eating.eat_type_id }}</div>
-                            <div class="grid-item">{{ eating.kcal }}</div>
-                            <div class="grid-item">{{ eating.carbohydrate }}</div>
-                            <div class="grid-item">{{ eating.fat }}</div>
-                            <div class="grid-item">{{ eating.protein }}</div>
+                            {% for dinner in dinner %}
+                                <div class="grid-item">menu_name</div>
+                                <div class="grid-item">{{ dinner.kcal }}</div>
+                                <div class="grid-item">{{ dinner.carbohydrate }}</div>
+                                <div class="grid-item">{{ dinner.fat }}</div>
+                                <div class="grid-item">{{ dinner.protein }}</div>
                             {% endfor %}
                         </div>
                     </div>
                     <button type="submit" class="btn original-btn">
-                        <a href="/add/eating">新增飲食</a>
+                        <a href="/eating/add">新增飲食</a>
                     </button>
                 </div>
             </div>
@@ -469,12 +488,15 @@
                 <div class="footer-social-area mt-30">
                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
                             class="fa fa-pinterest" aria-hidden="true"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"
-                                                                                                  aria-hidden="true"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"
-                                                                                                 aria-hidden="true"></i></a>
-                    <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i class="fa fa-linkedin"
-                                                                                                 aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
+                            class="fa fa-facebook"
+                            aria-hidden="true"></i></a>
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
+                            class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                    <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i
+                            class="fa fa-linkedin"
+                            aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

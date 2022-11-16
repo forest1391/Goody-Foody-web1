@@ -132,7 +132,30 @@
     </header>
 
 
+<div class="contact-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-9">
+                <div class="contact-form">
+                    <h5>會員資料</h5>
+                    <!-- Contact Form -->
+                    <form action="/login/" method="post">
+                         {% csrf_token %}
+                        <div class="row">
+                            <div class="form-group">
 
+					            <label for="exampleInputFile">
+					            	頭像顯示圖片
+					            </label>
+					            <input type="file" class="form-control-file" id="exampleInputFile">
+				            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

@@ -160,7 +160,7 @@
 
                         <div class="col-12 col-md-6">
                             <div class="single-blog-thumbnail">
-                                <a href="/communitypage"> <img src="/static/img/日式和果子/IMG_8431.jpeg" alt=""></a>
+                                <a href="/communitypage/{{post.post_id }}/"> <img src="/static/img/日式和果子/IMG_8431.jpeg" alt=""></a>
                                 <div class="post-date">
                                     <a href="#">3 <span>月</span></a>
                                 </div>
@@ -172,8 +172,8 @@
                             <div class="single-blog-content">
                                 <div class="line"></div>
                                 <a href="#" class="post-tag">日式料理</a>
-                                <h4><a href="/communitypage" class="post-headline">{{ post.title }}</a></h4>
-                                <p>{{ post.content }}</p>
+                                <h4><a href="/communitypage/{{ post.post_id }}/" class="post-headline">{{ post.title }}</a></h4>
+                                <p  maxlength="30">{{ post.content }}</p>
                                 <div class="post-meta">
                                     <p>By <a href="/Userintroduction">森林木</a></p>
                                     <p>3 則留言</p>
@@ -190,11 +190,11 @@
             <div class="sidebar-widget-area">
                 <h5 class="title subscribe-title">新增發文</h5>
                 <div class="widget-content">
-                    {#                                <form action="#" class="newsletterForm">#}
+                    <form action="#" class="newsletterForm">
                     <button type="submit" class="btn original-btn">
-                        <a href="/post/add">發文</a>
+                        <a href="/post/add/">發文</a>
                     </button>
-                    {#                                </form>#}
+                                                    </form>
                 </div>
             </div>
 
@@ -326,21 +326,11 @@
                         </div>
                     </nav>
                 </div>
-
-                <!-- Footer Social Area -->
-                <div class="footer-social-area mt-30">
-                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
-                            class="fa fa-pinterest" aria-hidden="true"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"
-                                                                                                  aria-hidden="true"></i></a>
-                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"
-                                                                                                 aria-hidden="true"></i></a>
-                    <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i class="fa fa-linkedin"
-                                                                                                 aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
-    </div>
+
+
 
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

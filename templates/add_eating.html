@@ -152,25 +152,8 @@
                         <form action="/eating/add/" method="post">
                             {% csrf_token %}
                             <div class="row">
-                                 <div class="col-12 col-md-6">
-                                    <div class="group">
-                                         <input class="form-control" id="exampleFormControlInput1" name="eat_id" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>eat_id</label>
-                                    </div>
-                                </div>
 
-                                 <div class="col-12 col-md-6">
-                                    <div class="group">
-                                         <input class="form-control" id="exampleFormControlInput1" name="account" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>帳號</label>
-                                    </div>
-                                </div>
-
-                                 <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-6">
                                     <div class="group">
                                          <input class="form-control" id="exampleFormControlInput1" name="menu_id" required>
                                         <span class="highlight"></span>
@@ -184,7 +167,7 @@
                                          <input class="form-control" id="exampleFormControlInput1" name="eat_type_id" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
-                                        <label>eat_type</label>
+                                        <label>eat_type_id</label>
                                     </div>
                                 </div>
 
@@ -227,6 +210,15 @@
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>蛋白質</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="group">
+                                       <input class="form-control" id="exampleFormControlInput1" name="sodium" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>鈉</label>
                                     </div>
                                 </div>
 
