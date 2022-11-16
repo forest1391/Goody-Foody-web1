@@ -679,7 +679,9 @@
                                     <li><a href="/community">社群</a></li>
                                     <li><a href="/analyze">分析</a></li>
                                     <li><a href="/consult">諮詢</a></li>
+                                    {% if 'user_id' not in request.COOKIES.keys %}
                                     <li><a href="/login">登入</a></li>
+                                    {% endif %}
                                     <li><a href="/member">會員</a></li>
                                     {% if 'user_id' in request.COOKIES.keys %}
                                         <li><a href="/logout/">登出</a></li>

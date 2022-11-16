@@ -11,14 +11,14 @@ def regist40(request):
     return render(request, 'regist40.html')
 
 
-def deletemsg40(request):
+def deletemsg40(request,pk):
     if request.method == 'GET':
         return render(request, 'deletemsg40.html')
 
-    restaurant_msg_id = request.POST['restaurant_msg_id']
+    restaurant_msg_id = pk
     data = {
         'account': request.COOKIES['user_id'],
-        "restaurant_msg_id": restaurant_msg_id
+        "restaurant_msg_id":pk
     }
 
     r = requests.post(
@@ -28,7 +28,6 @@ def deletemsg40(request):
     )
     result = r.json()
     return redirect('/comment/')
-    # return render(request, 'deletemsg40.html', {'message': result['message']})
 
 
 #   <test>
@@ -131,3 +130,37 @@ def comment(request):
 #     )
 #     result = r.json()
 #     return render(request, 'deletemsg40.html', {'message': result['message']})
+# <test2>
+@user_login_required
+def comment(request):
+# def comment(request,pk):
+    if request.method == 'POST':
+        # restaurant_msg_id = request.POST['restaurant_msg_id']
+        restaurant_id = request.POST['restaurant_id']
+        # restaurant_id = pk
+        account = request.COOKIES['user_id']
+        content	 = request.POST['content']
+        data = {
+            # "restaurant_msg_id":restaurant_msg_id,
+            "restaurant_id ":restaurant_id,
+            "account":account,
+            "content":content,
+            # "time": time
+        }
+        r = requests.post(
+            f'{root}/add/',
+            data=data,
+            cookies={'sessionid': request.COOKIES['sessionid']}
+        )
+        print(r.json())
+    r = requests.get(
+        f'{root}/all/',
+        cookies={'sessionid': request.COOKIES['sessionid']}
+    )
+    if r.status_code == 401:
+        return redirect('/logout/')
+
+    result = r.json()
+    restaurant_msgs = result['data']
+    print(restaurant_msgs)
+    return render(request, 'comment.html', {'restaurant_msgs': restaurant_msgs})
