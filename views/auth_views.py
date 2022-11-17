@@ -13,13 +13,13 @@ def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
 
-    # btn_value = None
-    # if 'user1' in request.POST:
-    #     btn_value = request.POST['user1']
-    # elif 'user2' in request.POST:
-    #     btn_value = request.POST['user2']
-    # elif 'user3' in request.POST:
-    #     btn_value = request.POST['user3']
+    btn_value = None
+    if 'user1' in request.POST:
+        btn_value = request.POST['user1']
+    elif 'user2' in request.POST:
+        btn_value = request.POST['user2']
+    elif 'user3' in request.POST:
+        btn_value = request.POST['user3']
 
     # html
     user_id = request.POST['account']
@@ -29,7 +29,7 @@ def login(request):
     data = {
         'account': user_id,
         'password': pwd,
-        # 'btn_value': btn_value
+        'btn_value': btn_value
     }
     r = requests.post(
         f'{root}/login/',
