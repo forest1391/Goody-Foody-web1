@@ -30,6 +30,7 @@ urlpatterns = [
     # path('contact/', reviews_views.contact),
     # path('single/', reviews_views.single),
     path('community/', reviews_views.post),
+    path('add_eating/', reviews_views.add_eating),
     path('communitypage/', reviews_views.communitypage),
     path('communitypage2/', reviews_views.communitypage2),
     path('Userintroduction/', reviews_views.Userintroduction),
@@ -44,8 +45,9 @@ urlpatterns = [
 
     path('verify_diet/', reviews_views.verify_diet),
     path('verify_store/', reviews_views.verify_store),
-
-
+    path('post/add/', reviews_views.add),
+    path('tag/add/', reviews_views.add_tag),
+    path('eating/add/', reviews_views.add_eating),
     path('login/', auth_views.login),
     path('logout/', auth_views.logout),
     path('register/', auth_views.register),
