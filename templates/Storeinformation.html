@@ -147,57 +147,86 @@
                     <div class="contact-form">
                         <h5>新增店家資訊</h5>
                         <!-- Contact Form -->
-                        <form action="#" method="post">
+
+                        <form action="/information/add/" method="post">
+                             {% csrf_token %}
                             <div class="row">
+
                                 <div class="col-12 col-md-6">
                                     <div class="group">
-                                        <input type="text" name="name" id="name" required>
+                                        <input type="text" name="name"  required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>店家名稱</label>
                                     </div>
                                 </div>
+
                                 <div class="col-12 col-md-6">
                                     <div class="group">
-                                        <input type="email" name="email" id="email" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>聯絡信箱</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="group">
-                                        <input type="phone" name="phone" id="phoen" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>連絡電話</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="group">
-                                        <input type="address" name="address" id="address" required>
+                                        <input type="text" name="address"  required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>地址</label>
                                     </div>
                                 </div>
+
                                 <div class="col-12 col-md-6">
                                     <div class="group">
-                                        <input type="business" name="business" id="business" required>
+                                        <input type="phone" name="phone" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>電話</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="group">
+                                        <input type="text" name="business_hours"  required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>營業時間</label>
                                     </div>
                                 </div>
 
-                                <div class="col-12">
+                                <div class="col-12 col-md-6">
                                     <div class="group">
-                                        <textarea name="message" id="message" required></textarea>
+                                        <input type="text" name="license_id" id="business" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
-                                        <label>店家簡介</label>
+                                        <label>統一編號</label>
                                     </div>
                                 </div>
+
+                                 <div class="col-12 col-md-6">
+                                    <div class="group">
+                                        <input type="text" name="resume" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>餐廳介紹</label>
+                                    </div>
+                                </div>
+
+                                 <div class="col-12 col-md-6">
+                                    <div class="group">
+                                        <input type="text" name="lat"  required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>經度</label>
+                                    </div>
+                                </div>
+
+                                 <div class="col-12 col-md-6">
+                                    <div class="group">
+                                        <input type="text" name="lon"  required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label>緯度</label>
+                                    </div>
+                                </div>
+
+
+
+
                                 <div class="col-12">
                                     <button type="submit" class="btn original-btn">確定新增店家</button>
                                 </div>
