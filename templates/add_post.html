@@ -154,7 +154,7 @@
                     <h5>新增發文</h5>
                     <!-- Contact Form -->
 
-                    <form action="/post/add/" method="post">
+                    <form action="/post/add/" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="row">
 
@@ -175,15 +175,15 @@
                             {#測試#}
 
 
-{#                            <div class="col-12 col-md-6">#}
-{#                                <div class="group">#}
-{#                                    <input class="form-control" id="exampleFormControlInput1" name="post_id" required>#}
-                                    {#                                        <input type="text" name="title" id="title" required>#}
-{#                                    <span class="highlight"></span>#}
-{#                                    <span class="bar"></span>#}
-{#                                    <label>帳號</label>#}
-{#                                </div>#}
-{#                            </div>#}
+                            {#                            <div class="col-12 col-md-6">#}
+                            {#                                <div class="group">#}
+                            {#                                    <input class="form-control" id="exampleFormControlInput1" name="post_id" required>#}
+                            {#                                        <input type="text" name="title" id="title" required>#}
+                            {#                                    <span class="highlight"></span>#}
+                            {#                                    <span class="bar"></span>#}
+                            {#                                    <label>帳號</label>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
                             <div class="col-12 col-md-6">
                                 <div class="group">
                                     {#                                        <input type="text" name="title" id="title" required>#}
@@ -203,28 +203,32 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 col-md-6">
-                                <div class="group">
-                                    <input type="file" name="user_image"><br><br>
-
-                                </div>
+                            <div class="form-group mb-3">
+                                <label class="h5 font-weight-bold">圖片</label>
+                                <input type="file" class="form-control" name="image" >
                             </div>
+
+                            {#                            <div class="col-12 col-md-6">#}
+                            {#                                <div class="group">#}
+                            {#                                    <input type="file" name="image"><br><br>#}
+                            {##}
+                            {#                                </div>#}
+                            {#                            </div>#}
 
 
                         </div>
 
 
+                        <div class="col-12">
+                            {#                    <a class="btn" href="/index">Link</a>#}
+                            {#                    <button class="btn" type="submit">Button</button>#}
+                            <button type="submit" class="btn original-btn">發文</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-12">
-                    <a class="btn" href="/index">Link</a>
-                    <button class="btn" type="submit">Button</button>
-                    <button type="submit" class="btn original-btn">發文</button>
-                </div>
-                </form>
             </div>
         </div>
     </div>
-</div>
 </div>
 <!-- ##### Hero Area Start ##### -->
 
@@ -350,8 +354,9 @@
                                                                                                   aria-hidden="true"></i></a>
                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"
                                                                                                  aria-hidden="true"></i></a>
-                    <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i class="fa fa-linkedin"
-                                                                                                 aria-hidden="true"></i></a>
+                    <a href="/login" data-toggle="tooltip" data-placement="bottom" title="登入"><i
+                            class="fa fa-linkedin"
+                            aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

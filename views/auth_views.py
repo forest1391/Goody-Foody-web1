@@ -45,6 +45,7 @@ def login(request):
     else:
         return redirect('/login/')
 
+
 @user_login_required
 def logout(request):
     r = requests.post(
@@ -71,7 +72,7 @@ def register(request):
 
     account = request.POST['account']
     password = request.POST['password']
-    btn_value = request.POST['rank']
+    # btn_value = request.POST['rank']
 
     data = {
         'account': account,
@@ -80,15 +81,24 @@ def register(request):
     }
 
     r = requests.post(
-        f'{root}/login/',
+        f'{root}/register/',
         data=data
     )
     # print(r.cookies.get_dict())
+    # result = r.json()
+    # if result['success'] is True:
+    #     ret = redirect('/login/')
+    #     ret.set_cookie('sessionid', result['sessionid'])
+    #     ret.set_cookie('user_id', account)
+    #     return ret
+    # else:
+    #     return redirect('/register/')
+
+    print(r.cookies.get_dict())
     result = r.json()
+    # print(result)
     if result['success'] is True:
-        ret = redirect('/login/')
-        ret.set_cookie('sessionid', result['sessionid'])
-        ret.set_cookie('user_id', account)
-        return ret
-    else:
         return redirect('/login/')
+    else:
+        return redirect('/register/')
+    #
