@@ -52,13 +52,9 @@ urlpatterns = [
     path('logout/', auth_views.logout),
     path('register/', auth_views.register),
 
-    # <test>
     # path('comment/<int:pk>', comment_views.comment),
     path('comment/', comment_views.comment),
-    # path('comment/add/',comment_views.comment_add),
-    # path('regist40/', comment_views.regist40),
-    path('deletemsg40/<int:pk>/', comment_views.deletemsg40),
-    # <test>
+    path('deletemsg40/<int:pk>/', comment_views.deletemsg40), 
 
 ]
 
