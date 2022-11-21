@@ -130,4 +130,4 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-API_URL = 'http://localhost:8001/api'
+API_URL = 'https://app-apigoodyfoody.herokuapp.com/api'
