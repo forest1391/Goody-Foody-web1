@@ -38,7 +38,7 @@ urlpatterns = [
     path('consult/', reviews_views.consult),
     path('menu/', reviews_views.menu),
     # path('information/', reviews_views.information),
-    path('consultchatroom/', chat_views.chat_and_add),
+    path('consultchatroom/', chat_views.chat),
     path('menuadd/', reviews_views.menuadd),
     path('Storeinformation/', reviews_views.storeinformation),
     path('map/', reviews_views.map),
