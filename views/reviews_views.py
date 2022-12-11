@@ -30,7 +30,13 @@ def index(request):
     restaurants = result2['data']
     posts = result1['data']
     tags = result3['data']
-    return render(request, 'index.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
+    if 'user_id' in request.COOKIES:
+        if request.COOKIES.get('btn') == 2:
+            return render(request, 'user2.html')
+        elif request.COOKIES.get('btn') == 3:
+            return render(request, 'user2.html')
+        else:
+            return render(request, 'index.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
 
 @user_login_required
 def analyze(request):
@@ -328,5 +334,5 @@ def get_a_post(request):
     )
     data = r.json()
     books = data['data']
-    return render(request, 'community.html', {'posts': posts})
+    return render(request, 'community.html', {'posts': post})
 

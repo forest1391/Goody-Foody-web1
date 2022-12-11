@@ -38,7 +38,9 @@ def login(request):
     # print(r.cookies.get_dict())
     result = r.json()
     if result['success'] is True:
+
         ret = redirect('/index/')
+        ret.set_cookie('btn',btn_value)
         ret.set_cookie('sessionid', result['sessionid'])
         ret.set_cookie('user_id', user_id)
         return ret

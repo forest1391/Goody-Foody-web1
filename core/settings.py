@@ -25,11 +25,11 @@ SECRET_KEY = 'django-insecure-$^cj&s%f6ehv=aa44rh1l*j-_2ke%%y_#m3=)$e-09e^bggjxv
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-ALLOWED_HOSTS = ['app-karenforest.herokuapp.com']
+# ALLOWED_HOSTS = ['app-karenforest.herokuapp.com']
 
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
-DEBUG = False
+DEBUG = True
 
 # Application definition
 
@@ -132,6 +132,6 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# API_URL = 'http://127.0.0.1:8001/'
+API_URL = 'http://127.0.0.1:8001/api'
 
-API_URL = 'https://app-apigoodyfoody.herokuapp.com/api'
+# API_URL = 'https://app-apigoodyfoody.herokuapp.com/api'
