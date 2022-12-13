@@ -23,7 +23,7 @@ from views import analyze_views,auth_views,chat_views,comment_views,post_views,r
 urlpatterns = [
     # path('admin/', admin.site.urls),
     # path('', views.index),
-    path('', lambda request: redirect('/index/')),  # 直接導向views畫面  lambda
+    path('', lambda request: redirect('/login/')),  # 直接導向views畫面  lambda
     path('index/', reviews_views.index),
     path('analyze/', analyze_views.analyze),
     path('menu/<int:pk>', restaurant_views.restaurant_menu),
@@ -58,6 +58,10 @@ urlpatterns = [
     path('login/', auth_views.login),
     path('logout/', auth_views.logout),
     path('register/', auth_views.register),
+    # path('forget/', auth_views.forget),
+    path('user2register/', auth_views.user2register),
+
+
 
     # <test>
     # path('comment/<int:pk>', comment_views.comment),

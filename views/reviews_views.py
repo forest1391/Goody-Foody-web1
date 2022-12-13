@@ -31,10 +31,10 @@ def index(request):
     posts = result1['data']
     tags = result3['data']
     if 'user_id' in request.COOKIES:
-        if request.COOKIES.get('btn') == 2:
-            return render(request, 'user2.html')
-        elif request.COOKIES.get('btn') == 3:
-            return render(request, 'user2.html')
+        if request.COOKIES.get('rank') == 2:
+            return render(request, 'user2.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
+        elif request.COOKIES.get('rank') == 3:
+            return render(request, 'user3.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
         else:
             return render(request, 'index.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
 
