@@ -64,7 +64,7 @@ urlpatterns = [
     path('logout/', auth_views.logout),
     path('register/', auth_views.register),
     # path('forget/', auth_views.forget),
-    path('user2register/', auth_views.user2register),
+    # path('user2register/', auth_views.user2register),
 
 
 
@@ -73,7 +73,7 @@ urlpatterns = [
     path('comment/', comment_views.comment),
     # path('comment/add/',comment_views.comment_add),
     # path('regist40/', comment_views.regist40),
-    path('deletemsg40/', comment_views.deletemsg40),
+    path('deletemsg40/<int:pk>/', comment_views.deletemsg40),
     # path('add_eating_item/<int:no>/', )
     # <test>
 
