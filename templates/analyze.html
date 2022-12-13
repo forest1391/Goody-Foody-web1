@@ -234,8 +234,10 @@
     {#            day = date.getDate();#}
     {#            document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;#}
     {#        </script>#}
-    <div class="container">
+ <h4 style="text-align:center;">今日飲食紀錄</h4><br>
+<div class="container">
         <div class="row">
+
             <!-- Single Blog Area  -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="single-blog-area blog-style-2 mb-100">
@@ -271,19 +273,151 @@
 
 
                         <div class="grid-container">
-                            <div class="grid-item"></div>
+                            <div class="grid-item">飲食</div>
                             <div class="grid-item">熱量</div>
                             <div class="grid-item">碳水</div>
                             <div class="grid-item">脂質</div>
                             <div class="grid-item">蛋白質</div>
 
-                            <div class="grid-item">三明治</div>
-                            <div class="grid-item">240</div>
-                            <div class="grid-item">94</div>
-                            <div class="grid-item">13</div>
-                            <div class="grid-item">2</div>
+
+                            {% for today_breakfast in today_breakfast %}
+                                <div class="grid-item">{{ today_breakfast.menu_name }}</div>
+                                <div class="grid-item">{{ today_breakfast.kcal }}</div>
+                                <div class="grid-item">{{ today_breakfast.carbohydrate }}</div>
+                                <div class="grid-item">{{ today_breakfast.fat }}</div>
+                                <div class="grid-item">{{ today_breakfast.protein }}</div>
+                            {% endfor %}
+                        </div>
+
+                        {#                        <div class="post-meta">#}
+                        {#                            <p>By <a href="#">james smith</a></p>#}
+                        {#                            <p>3 則留言</p>#}
+                        {#                        </div>#}
+                    </div>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
+                    </button>
+                </div>
+            </div>
+            <!-- Single Blog Area  -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-blog-area blog-style-2 mb-100">
+                    <div class="single-blog-thumbnail">
+                        <img src="/static/img/blog-img/lunch.jpg" width="300" height="200" alt="">
+                        {#                            <div class="post-date">#}
+                        {#                                <a href="#">10 <span>3月</span></a>#}
+                        {#                            </div>#}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="single-blog-content mt-50">
+                        <div class="line"></div>
+                        <a href="#" class="post-tag">Lunch</a>
+                        <h4><a href="#" class="post-headline">午餐</a></h4>
+                        <div class="grid-container">
+                            <div class="grid-item">飲食</div>
+                            <div class="grid-item">熱量</div>
+                            <div class="grid-item">碳水</div>
+                            <div class="grid-item">脂質</div>
+                            <div class="grid-item">蛋白質</div>
+
+
+                            {% for today_lunch in today_lunch %}
+                                <div class="grid-item">{{ today_lunch.menu_name }}</div>
+                                <div class="grid-item">{{ today_lunch.kcal }}</div>
+                                <div class="grid-item">{{ today_lunch.carbohydrate }}</div>
+                                <div class="grid-item">{{ today_lunch.fat }}</div>
+                                <div class="grid-item">{{ today_lunch.protein }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
+                    </button>
+                </div>
+            </div>
+            <!-- Single Blog Area  -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-blog-area blog-style-2 mb-100">
+                    <div class="single-blog-thumbnail">
+                        <img src="/static/img/blog-img/dinner.jpg" width="300" height="200" alt="">
+                        {#                            <div class="post-date">#}
+                        {#                                <a href="#">10 <span>3月</span></a>#}
+                        {#                            </div>#}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="single-blog-content mt-50">
+                        <div class="line"></div>
+                        <a href="#" class="post-tag">Dinner</a>
+                        <h4><a href="#" class="post-headline">晚餐</a></h4>
+                        <div class="grid-container">
+                            <div class="grid-item">飲食</div>
+                            <div class="grid-item">熱量</div>
+                            <div class="grid-item">碳水</div>
+                            <div class="grid-item">脂質</div>
+                            <div class="grid-item">蛋白質</div>
+                            {% for today_dinner in today_dinner %}
+                                <div class="grid-item">{{ today_dinner.menu_name }}</div>
+                                <div class="grid-item">{{ today_dinner.kcal }}</div>
+                                <div class="grid-item">{{ today_dinner.carbohydrate }}</div>
+                                <div class="grid-item">{{ today_dinner.fat }}</div>
+                                <div class="grid-item">{{ today_dinner.protein }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button type="submit" class="btn original-btn">
+                        <a href="/eating/add">新增飲食</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <h4 style="text-align:center;">所有飲食紀錄</h4><br>
+    <div class="container">
+        <div class="row">
+
+            <!-- Single Blog Area  -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="single-blog-area blog-style-2 mb-100">
+                    <div class="single-blog-thumbnail">
+                        <img src="/static/img/blog-img/breakfast.jpg" width="300" height="200" alt="">
+                        {#                        <div class="post-date">#}
+                        {#                            #}
+                        {#                            <a href="#">10 <span>3月</span></a>#}
+                        {#                        </div>#}
+                    </div>
+                    <!-- Blog Content -->
+                    <div class="single-blog-content mt-50">
+                        <div class="line"></div>
+                        <a href="#" class="post-tag">Breakfast</a>
+                        <h4><a href="#" class="post-headline">早餐</a></h4>
+                        <style>
+                            .grid-container {
+                                display: grid;
+                                grid-template-columns: auto auto auto auto auto;
+                                background-color: white;
+                                padding: 5px;
+                            }
+
+                            .grid-item {
+                                background-color: rgba(255, 255, 255, 0.8);
+                                border: 1px solid rgba(0, 0, 0, 0.8);
+                                padding: 10px;
+                                font-size: 15px;
+                                text-align: center;
+                            }
+                        </style>
+                        </head>
+
+
+                        <div class="grid-container">
+                            <div class="grid-item">飲食</div>
+                            <div class="grid-item">熱量</div>
+                            <div class="grid-item">碳水</div>
+                            <div class="grid-item">脂質</div>
+                            <div class="grid-item">蛋白質</div>
                             {% for breakfast in breakfast %}
-                                <div class="grid-item">menu_name</div>
+                                <div class="grid-item">{{ breakfast.menu_name }}</div>
                                 <div class="grid-item">{{ breakfast.kcal }}</div>
                                 <div class="grid-item">{{ breakfast.carbohydrate }}</div>
                                 <div class="grid-item">{{ breakfast.fat }}</div>
@@ -316,19 +450,14 @@
                         <a href="#" class="post-tag">Lunch</a>
                         <h4><a href="#" class="post-headline">午餐</a></h4>
                         <div class="grid-container">
-                            <div class="grid-item"></div>
+                            <div class="grid-item">飲食</div>
                             <div class="grid-item">熱量</div>
                             <div class="grid-item">碳水</div>
                             <div class="grid-item">脂質</div>
                             <div class="grid-item">蛋白質</div>
 
-                            <div class="grid-item">義大利麵</div>
-                            <div class="grid-item">240</div>
-                            <div class="grid-item">94</div>
-                            <div class="grid-item">13</div>
-                            <div class="grid-item">2</div>
                             {% for lunch in lunch %}
-                                <div class="grid-item">menu_name</div>
+                                <div class="grid-item">{{ lunch.menu_name }}</div>
                                 <div class="grid-item">{{ lunch.kcal }}</div>
                                 <div class="grid-item">{{ lunch.carbohydrate }}</div>
                                 <div class="grid-item">{{ lunch.fat }}</div>
@@ -356,19 +485,15 @@
                         <a href="#" class="post-tag">Dinner</a>
                         <h4><a href="#" class="post-headline">晚餐</a></h4>
                         <div class="grid-container">
-                            <div class="grid-item"></div>
+                            <div class="grid-item">飲食</div>
                             <div class="grid-item">熱量</div>
                             <div class="grid-item">碳水</div>
                             <div class="grid-item">脂質</div>
                             <div class="grid-item">蛋白質</div>
 
-                            <div class="grid-item">咖哩飯</div>
-                            <div class="grid-item">240</div>
-                            <div class="grid-item">94</div>
-                            <div class="grid-item">13</div>
-                            <div class="grid-item">2</div>
+
                             {% for dinner in dinner %}
-                                <div class="grid-item">menu_name</div>
+                                <div class="grid-item">{{ dinner.menu_name }}</div>
                                 <div class="grid-item">{{ dinner.kcal }}</div>
                                 <div class="grid-item">{{ dinner.carbohydrate }}</div>
                                 <div class="grid-item">{{ dinner.fat }}</div>

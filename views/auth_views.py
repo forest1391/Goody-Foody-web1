@@ -50,7 +50,6 @@ def login(request):
     else:
         return redirect('/login/')
 
-
 @user_login_required
 def logout(request):
     r = requests.post(

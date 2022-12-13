@@ -1,3 +1,14 @@
 $opensans-fonts: 'Open Sans', sans-serif;
 $helvetica-bold: 'helveticaneuebold';
 $helvetica-medium: 'helveticaneuemedium';
+
+.text-2{text-decoration: underline;}
+
+.ellipsis2 {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /*行數*/
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}

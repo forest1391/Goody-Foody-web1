@@ -37,6 +37,7 @@ def index(request):
             return render(request, 'user3.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
         else:
             return render(request, 'index.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
+    return render(request, 'index.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
 
 @user_login_required
 def analyze(request):
@@ -164,7 +165,7 @@ def consult(request):
 @user_login_required
 def menu(request):
     r = requests.get(
-        f'{root}/menu_review/all/',
+        f'{root}/menu/all/',
         cookies={'sessionid': request.COOKIES['sessionid']}
     )
     result = r.json()
@@ -268,6 +269,30 @@ def add_tag(request):
 
 
 
+@user_login_required
+def add_chat(request):
+    # if request.method =='GET':
+    #     return render(request, 'add_eating.html')
+    chat_id = request.POST['chat_id']
+    account = request.POST['account']
+    b_account = request.POST['b_account']
+    time = request.POST['time']
+    content = request.POST['content']
+
+    data = {
+        'chat_id': chat_id,
+        'account': account,
+        'b_account': b_account,
+        'time':time,
+        'content': content
+    }
+    r = requests.post(
+        f'{root}/chat/add/',
+        data=data
+        )
+
+    return redirect('/consultchatroom/')
+
 
 
 @user_login_required
@@ -285,6 +310,16 @@ def consultchatroom(request):
 @user_login_required
 def menuadd(request):
     return render(request, 'menuadd.html')
+
+@user_login_required
+def chat(request):
+    r = requests.get(
+        f'{root}/chat/all/',
+        cookies={'sessionid': request.COOKIES['sessionid']}
+    )
+    result = r.json()
+    chats = result['data']
+    return render(request, 'consultchatroom.html', {'chats': chats})
 
 @user_login_required
 def storeinformation(request):
@@ -334,5 +369,5 @@ def get_a_post(request):
     )
     data = r.json()
     books = data['data']
-    return render(request, 'community.html', {'posts': post})
+    return render(request, 'community.html', {'posts': posts})
 

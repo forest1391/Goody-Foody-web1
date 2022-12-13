@@ -110,12 +110,12 @@
 
                             <!-- Nav Start -->
                             <div class="classynav">
-                                <ul>
-                                  <li><a href="/menu">菜單</a></li>
-                                    <li><a href="/information">店家資訊</a></li>
-                                    <li><a href="/comment">評價</a></li>
-                                </ul>
-                            </div>
+                            <ul>
+                                <li><a href="/menu/{{ restaurant.restaurant_id }}">菜單</a></li>
+                                <li class="text-2"><a href="/information/{{ restaurant.restaurant_id }}">店家資訊</a></li>
+                                <li><a href="/comment">評價</a></li>
+                            </ul>
+                        </div>
                             <!-- Nav End -->
                         </div>
                     </nav>
@@ -165,23 +165,31 @@
                         <button type="button" class="btn">取消</button>
                     </a>
                     <button type="submit" class="btn btn-info">送出</button>
+
+                    <!-- <testbtn> -->
+                    <!-- <a href="/deletemsg40/">
+                        <button type="button" class="btn">刪除</button>
+                    </a> -->
+                    <!-- <testbtn> -->
                 </div>
                 </form>
                     <!-- test -->
                 </div>
                 <table class="table">
                     <thead>
-                        <a class="nav-link" href="/comment/"></a>     
+                        <!-- <test> -->
+                        <a class="nav-link" href="/comment/"></a>
+                        <!-- </test> -->
                     <tr>
                         <!-- <th>
                             自動編號(流水號)
                         </th> -->
-                        <!-- <th>
-                            餐廳編號
-                        </th> -->
-                        <th>
-                            留言者
-                        </th>
+{#                        <th>#}
+{#                            餐廳編號#}
+{#                        </th>#}
+{#                        <th>#}
+{#                            留言者#}
+{#                        </th>#}
                         <th>
                             內容
                         </th>
@@ -195,12 +203,12 @@
                         <tr>
                             <!-- <td>
                                 <a >
-                                    {{ restaurant_msg.restaurant_msg_id }}
+{#                                    {{ restaurant_msg.restaurant_msg_id }}#}
                                 </a>
                             </td> -->
-                            <!-- <td>
-                                {{ restaurant_msg.restaurant_id }}
-                            </td> -->
+{#                            <td>#}
+{#                                {{ restaurant_msg.restaurant_id }}#}
+{#                            </td>#}
                             <td>
                                 {{ restaurant_msg.account }}
                             </td>

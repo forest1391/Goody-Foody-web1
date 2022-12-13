@@ -124,8 +124,9 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li><a href="/menu">菜單</a></li>
-                                <li><a href="/information">店家資訊</a></li>
+                                <li><a href="/menu/{{ restaurant.restaurant_id }}">菜單</a></li>
+                                <li class="text-2"><a href="/information/{{ restaurant.restaurant_id }}">店家資訊</a>
+                                </li>
                                 <li><a href="/comment">評價</a></li>
                             </ul>
                         </div>
@@ -176,6 +177,9 @@
                         <th>
 
                         </th>
+                        <th>
+
+                        </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -200,59 +204,47 @@
                                 {{ menu.fat }}
                             </td>
 
-                            <td> 20 喜歡
-                                <button type="button" class="btn btn-info">
-                                    喜歡
-                                </button>
-                                <select>
-                                    <option>請選擇加入分類</option>
-                                    <option>早餐</option>
-                                    <option>午餐</option>
-                                    <option>晚餐</option>
-                                    <option>其他</option>
-
-                                </select>
-
-                                <a href="/add_eating_item/{{ menu.id }}/" class="btn btn-info">
-                                    分析
-                                </a>
-
+                            <td align="right">
+                                {#                                20 喜歡#}
+                                {#                                <button type="button" class="btn btn-info">#}
+                                {#                                    喜歡#}
+                                {#                                </button>#}
+                                <form action="/add_menu_item/{{ menu.menu_id }}/" method="post">
+                                    {% csrf_token %}
+                                    <select name="my_options">
+                                        {#                                    <option>請選擇加入分類</option>#}
+                                        <option value="1">早餐</option>
+                                        <option value="2">午餐</option>
+                                        <option value="3">晚餐</option>
+                                        {#                                    <option>其他</option>#}
+                                    </select>
                             </td>
+                            {#                                <form action="/add_menu_item/{{ menu.menu_id }}/" method="post">#}
+                            {#                                {% csrf_token %}#}
+
+                            {#                                <div class="col-12 col-md-6">#}
+                            {#                                    <div class="group">#}
+                            {#                                        <input class="form-control" id="exampleFormControlInput1" name="eat_type_id"#}
+                            {#                                               >#}
+                            {#                                        <span class="highlight"></span>#}
+                            {#                                        <span class="bar"></span>#}
+                            {#                                        <label>加入類別（123)</label>#}
+                            {#                                    </div>#}
+                            {#                                </div>#}
+                            <td align="left">
+                                <div class="col-12">
+                                    <button type="submit" class="btn original-btn1" >加入飲食紀錄
+                                    </button>
+                                </div>
+                                </form>
+                            </td>
+
 
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
-{#            提示框#}
-                <dialog id="infoModal">
-                    <p>成功加入分析</p>
 
-                    <button id="close">close</button>
-                </dialog>
-                <script>
-                    let btn = document.querySelector("#show");
-                    let infoModal = document.querySelector("#infoModal");
-                    let close = document.querySelector("#close");
-                    btn.addEventListener("click", function () {
-                        infoModal.showModal();
-                    })
-                    close.addEventListener("click", function () {
-                        infoModal.close();
-                    })
-
-                </script>
-                <style>
-                    dialog {
-                        border: none;
-                        box-shadow: 0 2px 6px #ccc;
-                        border-radius: 10px;
-                    }
-
-                    dialog::backdrop {
-                        background-color: rgba(0, 0, 0, 0.1);
-                    }
-                </style>
-            {#            提示框#}
             </div>
         </div>
         <div class="row">

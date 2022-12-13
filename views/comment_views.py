@@ -66,3 +66,19 @@ def comment(request):
     restaurant_msgs = result['data']
     print(restaurant_msgs)
     return render(request, 'comment.html', {'restaurant_msgs': restaurant_msgs})
+
+# @user_login_required
+# def comment(request):
+#     restaurant_id = request.GET.get('restaurant_id')
+#     r = requests.get(
+#         f'{root}/detail/',
+#         params={'restaurant_id': restaurant_id},
+#         cookies={'sessionid': request.COOKIES['sessionid']}
+#     )
+#     data = r.json()
+#     comments = data['data']
+#     return render(request, 'menu.html', {'comments': comments})
+
+
+
+#

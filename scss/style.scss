@@ -16,6 +16,8 @@
 
 /* :: Import Fonts */
 
+
+
 @font-face {
     font-family: 'helveticaneuebold';
     src: url('fonts/helvetica_neu_bold-webfont.woff2') format('woff2'),
@@ -727,9 +729,11 @@ img {
         }
         > p {
             line-height: 2;
+            -webkit-line-clamp: 2;
             margin-bottom: 70px;
             @media #{$breakpoint-lg} {
                 margin-bottom: 30px;
+
             }
         }
         .post-meta {

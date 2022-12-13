@@ -85,7 +85,6 @@
             </div>
         </div>
     </div>
-</div>
 
     <!-- Logo Area -->
     <div class="logo-area text-center">
@@ -95,53 +94,6 @@
                     <a href="/index" class="original-logo"><img src="/static/img/bg-img/goody.jpg" width="100"
                                                                 height="100" alt=""></a>
                     <h3>Goody Foody</h3>
-                </div>
-
-
-                <!-- Widget Area -->
-                <div class="sidebar-widget-area">
-                    <h5 class="title subscribe-title">新增店家資訊</h5>
-                    <div class="widget-content">
-                        <form action="#" class="newsletterForm">
-                            <button type="submit" class="btn original-btn">
-                                <a href="/Storeinformation">前往新增店家資訊</a>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        <div class="sidebar-widget-area">
-            <h5 class="title">標籤</h5>
-            <div class="widget-content">
-                <ul class="tags">
-                    {% for tag in tags %}
-                        <li><a href="#">{{ tag.tag_name }}</a></li>
-                    {% endfor %}
-
-                </ul>
-            </div>
-            <button type="submit" class="btn original-btn">
-                <a href="/tag/add">新增標籤</a>
-            </button>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-</div>
-<!-- ##### Blog Wrapper End ##### -->
-
-<!-- ##### Instagram Feed Area Start ##### -->
-<div class="instagram-feed-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="insta-title">
-                    <h5>Follow us @ Instagram</h5>
                 </div>
             </div>
         </div>
@@ -228,14 +180,10 @@
 {#<div style="display: flex">#}
 <body>
 <div class="container">
-    <div style="visibility:hidden" id="map" style="width: 100%; height: 70vh; padding:40px"></div>
+    <div id="map" style="width: 100%; height: 70vh; padding:40px"></div>
     <br>
-
-
-
-    <img src="/static/img/blog-img/loading.jpg" width="400" height="400" alt="">
-    {#    <input id="search-input"/>#}
-    {#    <p id="lat"></p>#}
+{#    <input id="search-input"/>#}
+{#    <p id="lat"></p>#}
 </div>
 </div>
 
@@ -303,7 +251,8 @@
                 {#alert(lat,lng)#}
                 document.getElementById("lat").value = lat;
                 document.getElementById("lng").value = lng;
-                window.location.href = 'http://localhost:8000/map/' + lat + '/' + lng + '/'
+
+
             }
         )
         ;
@@ -320,20 +269,20 @@
     <div class="row">
         <div class="col-12">
             <div class="insta-title">
-                {#                <h2><a>尋找店家</a></h2>#}
-                {#                <form action="/map/location/" method="post">#}
-                {% csrf_token %}
-                <input type="hidden" id="lat" name="lat" disabled="true">
-                <input type="hidden" id="lng" name="lng" disabled="true">
+                <h2><a>尋找店家</a></h2>
+                <form action="/map/location/" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" id="lat" name="lat" disabled="true">
+                    <input type="hidden" id="lng" name="lng" disabled="true">
                 </form>
             </div>
         </div>
     </div>
     <div class="sidebar-widget-area">
-        {#        <form action="#" class="search-form">#}
-        {#            <input type="search" name="search" id="search-input" placeholder="尋找店家、標籤">#}
-        {#            <input type="submit" value="submit">#}
-        {#        </form>#}
+        <form action="#" class="search-form">
+            <input type="search" name="search" id="search-input" placeholder="尋找店家、標籤">
+            <input type="submit" value="submit">
+        </form>
     </div>
 </div>
 
@@ -431,94 +380,96 @@
             {##}
             {#                    </div>#}
             <!-- Single Blog Area  -->
-            {#            {% for restaurant in restaurants %}#}
-            {#                <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" data-wow-delay="0.2s"#}
-            {#                     data-wow-duration="1000ms">#}
-            {#                    <div class="row align-items-center">#}
-            {##}
-            {#                        <div class="col-12 col-md-6">#}
-            {#                            <div class="single-blog-thumbnail">#}
-            {#                                <a href="/information/{{ restaurant.restaurant_id }}/"> <img#}
-            {#                                        src="/static/img/restaurant-img/z{{ restaurant.restaurant_id }}.jpeg" alt=""></a>#}
-            {#                                <div class="post-date">#}
-            {#                                    <a href="/information/{{ restaurant.restaurant_id }}/"><span>查看更多</span></a>#}
-            {#                                </div>#}
-            {#                            </div>#}
-            {#                        </div>#}
-            {##}
-            {#                        <div class="col-12 col-md-6">#}
-            {#                            <!-- Blog Content -->#}
-            {#                            <div class="single-blog-content">#}
-            {#                                <div class="line"></div>#}
-            {#                                <a href="#" class="post-tag">#水餃#善導寺美食</a>#}
-            {#                                <h4><a href="/information/{{ restaurant.restaurant_id }}/"#}
-            {#                                       class="post-headline">{{ restaurant.name }}</a></h4>#}
-            {##}
-            {#                                <div class="post-meta">#}
-            {##}
-            {#                                    <p>3 則留言</p>#}
-            {#                                </div>#}
-            {#                            </div>#}
-            {#                        </div>#}
-            {##}
-            {#                    </div>#}
-            {#                </div>#}
-            {#            {% endfor %}#}
-            {##}
-            {#        </div>#}
-            {##}
-            {#        <div class="col-12 col-md-4 col-lg-3">#}
-            {#            <div class="post-sidebar-area">#}
-            {##}
-            {#                <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" data-wow-delay="0.2s"#}
-            {#                     data-wow-duration="1000ms">#}
-            {#                    <div class="row align-items-center">#}
-            {#                    </div>#}
-            {#                </div>#}
-            {##}
-            {##}
-            {#                <!-- Widget Area -->#}
-            {#                <div class="sidebar-widget-area">#}
-            {#                    <h5 class="title subscribe-title">新增店家資訊</h5>#}
-            {#                    <div class="widget-content">#}
-            {#                        <form action="#" class="newsletterForm">#}
-            {#                            <button type="submit" class="btn original-btn">#}
-            {#                                <a href="/Storeinformation">前往新增店家資訊</a>#}
-            {#                            </button>#}
-            {#                        </form>#}
-            {#                    </div>#}
-            {#                    <br>#}
-            {#                    <a href="/index" class="original-logo"><img src="/static/img/bg-img/ad1.png" width="400" alt=""></a>#}
-            {#                    <br>#}
-            {#                    <br>#}
-            {#                    <br>#}
-            {#                    <a href="/index" class="original-logo"><img src="/static/img/bg-img/ad2.jpg" width="400" alt=""></a>#}
-            {#                    <br>#}
-            {#                    <br>#}
-            {#                    <br>#}
-            {#                    <a href="/index" class="original-logo"><img src="/static/img/bg-img/ad3.jpg" width="400" alt=""></a>#}
-            {#                </div>#}
-            {##}
-            {#            </div>#}
-            {#        </div>#}
-            {#        <div class="sidebar-widget-area">#}
-            {#            <h5 class="title">標籤</h5>#}
-            {#            <div class="widget-content">#}
-            {#                <ul class="tags">#}
-            {#                    <li><a href="#">日式料理</a></li>#}
-            {#                    <li><a href="#">日式點心</a></li>#}
-            {#                    <li><a href="#">水餃、鍋貼</a></li>#}
-            {#                    <li><a href="#">小火鍋</a></li>#}
-            {#                    <li><a href="#">你餓了嗎</a></li>#}
-            {#                    <li><a href="#">燒臘便當</a></li>#}
-            {#                    <li><a href="#">北京烤鴨</a></li>#}
-            {#                    <li><a href="#">韓式料理</a></li>#}
-            {#                    <li><a href="#">高檔餐廳</a></li>#}
-            {#                </ul>#}
-            {#            </div>#}
-            {#        </div>#}
+            {% for restaurant in restaurants %}
+                <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" data-wow-delay="0.2s"
+                     data-wow-duration="1000ms">
+                    <div class="row align-items-center">
+
+                        <div class="col-12 col-md-6">
+                            <div class="single-blog-thumbnail">
+                                <a href="/information/{{ restaurant.restaurant_id }}/"> <img
+                                        src="/static/img/restaurant-img/z{{ restaurant.restaurant_id }}.jpeg" alt=""></a>
+                                {#                                <div class="post-date">#}
+                                {#                                    <a href="/information/{{ restaurant.restaurant_id }}/"><span>查看更多</span></a>#}
+                                {#                                </div>#}
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <!-- Blog Content -->
+                            <div class="single-blog-content">
+                                <div class="line"></div>
+                                <a href="#" class="post-tag">#水餃#善導寺美食</a>
+                                <h4><a href="/information/{{ restaurant.restaurant_id }}/"
+                                       class="post-headline">{{ restaurant.name }}</a></h4>
+
+                                <div class="post-meta">
+
+                                    <p>3 則留言</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+        <div class="col-12 col-md-4 col-lg-3">
+            <div class="post-sidebar-area">
+
+                <div class="single-blog-area blog-style-2 mb-50 wow fadeInUp" data-wow-delay="0.2s"
+                     data-wow-duration="1000ms">
+                    <div class="row align-items-center">
+                    </div>
+                </div>
+
+
+                <!-- Widget Area -->
+                <div class="sidebar-widget-area">
+                    <h5 class="title subscribe-title">新增店家資訊</h5>
+                    <div class="widget-content">
+                        <form action="#" class="newsletterForm">
+                            <button type="submit" class="btn original-btn">
+                                <a href="/Storeinformation">前往新增店家資訊</a>
+                            </button>
+                        </form>
+                    </div>
+                    <br>
+                    <a href="/index" class="original-logo"><img src="/static/img/bg-img/ad1.png" width="400" alt=""></a>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="/index" class="original-logo"><img src="/static/img/bg-img/ad2.jpg" width="400" alt=""></a>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="/index" class="original-logo"><img src="/static/img/bg-img/ad3.jpg" width="400" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="sidebar-widget-area">
+            <h5 class="title">標籤</h5>
+            <div class="widget-content">
+                <ul class="tags">
+                    {% for tag in tags %}
+                    <li><a href="#">{{ tag.tag_name }}</a></li>
+{#                    <li><a href="#">日式點心</a></li>#}
+{#                    <li><a href="#">水餃、鍋貼</a></li>#}
+{#                    <li><a href="#">小火鍋</a></li>#}
+{#                    <li><a href="#">你餓了嗎</a></li>#}
+{#                    <li><a href="#">燒臘便當</a></li>#}
+{#                    <li><a href="#">北京烤鴨</a></li>#}
+{#                    <li><a href="#">韓式料理</a></li>#}
+{#                    <li><a href="#">高檔餐廳</a></li>#}
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 <!-- ##### Blog Wrapper End ##### -->
@@ -528,9 +479,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                {#                <div class="insta-title">#}
-                {#                    <h5>Follow us @ Instagram</h5>#}
-                {#                </div>#}
+                <div class="insta-title">
+                    <h5>Follow us @ Instagram</h5>
+                </div>
             </div>
         </div>
     </div>

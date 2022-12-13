@@ -43,14 +43,7 @@ def add_chat(request):
 def chat_and_add(request):
     if request.method =='GET':
         return render(request, 'consultchatroom.html')
-    #讀取資料
-    r = requests.get(
-        f'{root}/chat/chat/',
-        cookies={'sessionid': request.COOKIES['sessionid']}
-    )
 
-
-    #新增資料
     b_account = request.POST['b_account']
     content = request.POST['content']
     time = request.POST['time']
@@ -62,8 +55,13 @@ def chat_and_add(request):
         'time':time
     }
 
+    r = requests.get(
+        f'{root}/chat/chat/',
+        cookies={'sessionid': request.COOKIES['sessionid']}
+    )
     result = r.json()
     chats = result['data']
+
 
     return render(request, 'consultchatroom.html', {'chats': chats})
 
