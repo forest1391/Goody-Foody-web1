@@ -37,7 +37,7 @@ def index(request):
             return render(request, 'user3.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
         else:
             return render(request, 'index.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
-    return render(request, 'index.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
+    # return render(request, 'index.html', {'restaurants': restaurants,'posts':posts,'tags':tags})
 
 @user_login_required
 def analyze(request):

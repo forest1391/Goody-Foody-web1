@@ -107,92 +107,92 @@ def register(request):
         return redirect('/register/')
     #
 
-def user1register(request):
-    return render(request, 'user2register.html')
-
-    account = request.POST['account']
-    password = request.POST['password']
-    name = requests.POST['name']
-    # btn_value = request.POST['rank']
-
-    data = {
-        'account': account,
-        'password': password,
-        'name': name,
-    }
-
-    r = requests.post(
-        f'{root}/register/',
-        data=data
-    )
-
-    print(r.cookies.get_dict())
-    result = r.json()
-    # print(result)
-    if result['success'] is True:
-        return redirect('/login/')
-    else:
-        return redirect('/user2register.htm/')
-
-
-def user2register(request):
-    return render(request, 'user2register.html')
-    account = request.POST['account']
-    password = request.POST['password']
-    name = requests.POST['name']
-
-    # btn_value = request.POST['rank']
-
-    data = {
-        'account': account,
-        'password': password,
-        'name': name
-
-    }
-
-    r = requests.post(
-        f'{root}/register/',
-        data=data
-    )
-
-    print(r.cookies.get_dict())
-    result = r.json()
-    # print(result)
-    if result['success'] is True:
-        return redirect('/login/')
-    else:
-        return redirect('/user2register.htm/')
-
-
-def user3register(request):
-    return render(request, 'user2register.html')
-    account = request.POST['account']
-    password = request.POST['password']
-    name = requests.POST['name']
-    num = requests.POST['num']
-
-    # btn_value = request.POST['rank']
-
-    data = {
-        'account': account,
-        'password': password,
-        'name': name,
-        'num': num
-
-    }
-
-    r = requests.post(
-        f'{root}/register/',
-        data=data
-    )
-
-    print(r.cookies.get_dict())
-    result = r.json()
-    # print(result)
-    if result['success'] is True:
-        return redirect('/login/')
-    else:
-        return redirect('/user2register.htm/')
+# def user1register(request):
+#     return render(request, 'user2register.html')
+#
+#     account = request.POST['account']
+#     password = request.POST['password']
+#     name = requests.POST['name']
+#     # btn_value = request.POST['rank']
+#
+#     data = {
+#         'account': account,
+#         'password': password,
+#         'name': name,
+#     }
+#
+#     r = requests.post(
+#         f'{root}/register/',
+#         data=data
+#     )
+#
+#     print(r.cookies.get_dict())
+#     result = r.json()
+#     # print(result)
+#     if result['success'] is True:
+#         return redirect('/login/')
+#     else:
+#         return redirect('/user2register.htm/')
+#
+#
+# def user2register(request):
+#     return render(request, 'user2register.html')
+#     account = request.POST['account']
+#     password = request.POST['password']
+#     name = requests.POST['name']
+#
+#     # btn_value = request.POST['rank']
+#
+#     data = {
+#         'account': account,
+#         'password': password,
+#         'name': name
+#
+#     }
+#
+#     r = requests.post(
+#         f'{root}/register/',
+#         data=data
+#     )
+#
+#     print(r.cookies.get_dict())
+#     result = r.json()
+#     # print(result)
+#     if result['success'] is True:
+#         return redirect('/login/')
+#     else:
+#         return redirect('/user2register.htm/')
+#
+#
+# def user3register(request):
+#     return render(request, 'user2register.html')
+#     account = request.POST['account']
+#     password = request.POST['password']
+#     name = requests.POST['name']
+#     num = requests.POST['num']
+#
+#     # btn_value = request.POST['rank']
+#
+#     data = {
+#         'account': account,
+#         'password': password,
+#         'name': name,
+#         'num': num
+#
+#     }
+#
+#     r = requests.post(
+#         f'{root}/register/',
+#         data=data
+#     )
+#
+#     print(r.cookies.get_dict())
+#     result = r.json()
+#     # print(result)
+#     if result['success'] is True:
+#         return redirect('/login/')
+#     else:
+#         return redirect('/user2register.htm/')
 
 
 # def forget(request):
